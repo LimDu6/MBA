@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYU Marriott MBA — Para Candidatos de Latinoamérica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light only;
+  --navy:   #002E5D;
+  --blue:   #0062B8;
+  --lblue:  #0078D4;
+  --sky:    #D6E8F7;
+  --gold:   #C8A951;
+  --white:  #FFFFFF;
+  --offwh:  #F5F7FA;
+  --border: #DDE4EE;
+  --text:   #1A2744;
+  --mid:    #4A5568;
+  --muted:  #7A8BA8;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;font-weight:400;color:var(--text);background:var(--white);overflow-x:hidden;color-scheme:light}
+
+/* ─── TOP BAR ─── */
+.topbar{background:var(--navy);padding:0.45rem 2rem;display:flex;align-items:center;gap:0.6rem}
+.topbar img{height:22px}
+.topbar span{color:rgba(255,255,255,0.82);font-size:0.72rem;letter-spacing:0.05em}
+.topbar .tb-sep{color:rgba(255,255,255,0.25);margin:0 0.3rem}
+
+/* ─── MAIN NAV ─── */
+nav{background:var(--white);border-bottom:3px solid var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,46,93,0.08)}
+.nav-inner{display:flex;align-items:stretch;max-width:1200px;margin:0 auto;padding:0 2rem}
+.nav-brand{display:flex;align-items:center;gap:0.75rem;padding:1rem 0;margin-right:2rem;text-decoration:none;border-right:1px solid var(--border);padding-right:2rem}
+.brand-text{line-height:1.2}
+.brand-title{font-size:0.78rem;font-weight:700;color:var(--navy);letter-spacing:0.03em}
+.brand-sub{font-size:0.65rem;color:var(--muted);font-weight:400}
+.nav-tabs{display:flex;gap:0}
+.nav-tab{background:none;border:none;padding:0 1.5rem;font-family:'Open Sans',sans-serif;font-size:0.8rem;font-weight:600;color:var(--mid);cursor:pointer;position:relative;letter-spacing:0.01em;transition:color 0.2s;white-space:nowrap}
+.nav-tab::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:transparent;transition:background 0.2s}
+.nav-tab.active{color:var(--navy)}
+.nav-tab.active::after,.nav-tab:hover::after{background:var(--blue)}
+.nav-tab:hover{color:var(--navy)}
+.nav-contact{margin-left:auto;display:flex;align-items:center;gap:0.5rem;padding:0.6rem 0}
+.nav-contact a{font-size:0.73rem;font-weight:600;padding:0.45rem 1rem;text-decoration:none;transition:all 0.2s}
+.btn-outline-sm{border:1.5px solid var(--navy);color:var(--navy)}
+.btn-outline-sm:hover{background:var(--navy);color:var(--white)}
+.btn-solid-sm{background:var(--blue);color:var(--white)}
+.btn-solid-sm:hover{background:var(--navy)}
+
+/* ─── SECTIONS ─── */
+.page-section{display:none}
+.page-section.active{display:block}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#004080 100%);color:var(--white);padding:4.5rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-5%;top:-20%;width:60%;height:140%;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%230062B8' fill-opacity='0.15'/%3E%3C/svg%3E") center/contain no-repeat;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-block;background:rgba(200,169,81,0.2);border:1px solid rgba(200,169,81,0.4);color:var(--gold);font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 0.9rem;margin-bottom:1.2rem;font-weight:700}
+.hero h1{font-family:'Merriweather',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.8;margin-bottom:2rem;max-width:45ch}
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-hero-gold{background:var(--gold);color:var(--navy);padding:0.8rem 1.8rem;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;transition:all 0.2s}
+.btn-hero-gold:hover{background:#d4b55f;transform:translateY(-2px)}
+.btn-hero-ghost{border:1.5px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.85);padding:0.8rem 1.8rem;font-size:0.8rem;font-weight:600;text-decoration:none;transition:all 0.2s}
+.btn-hero-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:relative;z-index:1}
+.stat-box{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);padding:1.5rem;text-align:center;backdrop-filter:blur(4px)}
+.stat-box-num{font-family:'Merriweather',serif;font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-box-label{font-size:0.72rem;color:rgba(255,255,255,0.82);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.35rem;font-weight:600}
+
+/* ─── GENERIC CONTENT ─── */
+.content-section{padding:4rem 2rem}
+.content-inner{max-width:1200px;margin:0 auto}
+.section-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue);font-weight:700;margin-bottom:0.6rem}
+.section-heading{font-family:'Merriweather',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--navy);margin-bottom:1rem;line-height:1.25}
+.section-heading em{font-style:italic;color:var(--blue)}
+.section-body{font-size:0.92rem;line-height:1.85;color:var(--mid);max-width:70ch}
+.section-body p+p{margin-top:0.85rem}
+.divider{height:1px;background:var(--border);margin:3rem 0}
+.bg-light{background:var(--offwh)}
+.bg-navy{background:var(--navy)}
+.bg-navy .section-heading,.bg-navy .section-label{color:var(--white)}
+.bg-navy .section-label{color:var(--gold)}
+.bg-navy .section-body{color:rgba(255,255,255,0.92)}
+
+/* ─── GRID LAYOUTS ─── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+
+/* ─── CARDS ─── */
+.card{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:box-shadow 0.2s,transform 0.2s}
+.card:hover{box-shadow:0 8px 24px rgba(0,46,93,0.09);transform:translateY(-3px)}
+.card-icon{font-size:1.8rem;margin-bottom:0.9rem}
+.card-title{font-size:0.92rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem}
+.card-body{font-size:0.83rem;line-height:1.65;color:var(--mid)}
+.card-link{display:inline-block;margin-top:0.9rem;font-size:0.78rem;font-weight:700;color:var(--blue);text-decoration:none}
+.card-link:hover{text-decoration:underline}
+.card-highlight{border-top:3px solid var(--blue)}
+.card-gold{border-top:3px solid var(--gold)}
+
+/* ─── STORY CARDS ─── */
+.story-card{background:var(--white);border:1px solid var(--border);padding:2rem;position:relative}
+.story-card::before{content:'\201C';position:absolute;top:1rem;right:1.5rem;font-family:'Merriweather',serif;font-size:4rem;color:var(--blue);opacity:0.12;line-height:1}
+.story-q{font-family:'Merriweather',serif;font-size:0.92rem;font-style:italic;line-height:1.7;color:var(--navy);margin-bottom:1.2rem}
+.story-author{display:flex;align-items:center;gap:0.7rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+.story-init{width:36px;height:36px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:0.82rem;font-weight:700;color:var(--gold);flex-shrink:0}
+.story-name{font-size:0.82rem;font-weight:700;color:var(--navy)}
+.story-role{font-size:0.73rem;color:var(--muted)}
+
+/* ─── STEPS ─── */
+.steps-list{display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--border)}
+.step-item:last-child{border-bottom:none}
+.step-num{width:40px;height:40px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0}
+.step-content h4{font-size:0.92rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem}
+.step-content p{font-size:0.85rem;line-height:1.7;color:var(--mid)}
+.step-content a{color:var(--blue);text-decoration:none}
+.step-content a:hover{text-decoration:underline}
+
+/* ─── REQUIREMENTS LIST ─── */
+.req-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.req-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.88rem;line-height:1.6;color:var(--mid);padding:0.7rem;background:var(--offwh);border-left:3px solid var(--blue)}
+.req-list li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.1rem}
+.req-list.gold li{border-color:var(--gold)}
+.req-list.gold li::before{color:var(--gold)}
+
+/* ─── VISA TABLE ─── */
+.visa-table{width:100%;border-collapse:collapse;font-size:0.85rem}
+.visa-table th{background:var(--navy);color:var(--white);padding:1rem 1.2rem;text-align:left;font-weight:700;font-size:0.8rem}
+.visa-table th:first-child{background:var(--mid)}
+.visa-table td{padding:0.9rem 1.2rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6;color:var(--mid)}
+.visa-table tr:nth-child(even) td{background:var(--offwh)}
+.visa-table td:first-child{font-weight:700;color:var(--navy);width:25%;background:var(--sky)!important}
+.tag-f{display:inline-block;background:#E8F0FD;color:#1a56db;font-size:0.72rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:3px;letter-spacing:0.05em}
+.tag-j{display:inline-block;background:#FEF3C7;color:#92400e;font-size:0.72rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:3px;letter-spacing:0.05em}
+
+/* ─── HIGHLIGHT BOX ─── */
+.highlight-box{background:var(--sky);border:1px solid #b3d4ef;border-left:4px solid var(--blue);padding:1.4rem 1.6rem;margin:1.5rem 0}
+.highlight-box.gold{background:#FEF9EC;border-color:#e8d08a;border-left-color:var(--gold)}
+.highlight-box.red{background:#FEF2F2;border-color:#fca5a5;border-left-color:#ef4444}
+.highlight-box strong{color:var(--navy);font-size:0.88rem}
+.highlight-box p,.highlight-box ul{font-size:0.85rem;color:var(--mid);line-height:1.7;margin-top:0.4rem}
+.highlight-box ul{padding-left:1.1rem}
+
+/* ─── LINKS SECTION ─── */
+.link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.link-item{display:flex;align-items:center;gap:0.9rem;padding:1.1rem;border:1px solid var(--border);text-decoration:none;color:var(--navy);transition:all 0.2s}
+.link-item:hover{border-color:var(--blue);background:var(--sky)}
+.link-item-icon{width:34px;height:34px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.link-item-title{font-size:0.82rem;font-weight:700;display:block}
+.link-item-sub{font-size:0.72rem;color:var(--muted);margin-top:0.1rem}
+
+/* ─── CONTACT STRIP ─── */
+.contact-strip{background:var(--blue);padding:3rem 2rem;text-align:center}
+.contact-strip h3{font-family:'Merriweather',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.5rem}
+.contact-strip p{font-size:0.88rem;color:rgba(255,255,255,0.88);margin-bottom:1.8rem}
+.contact-strip-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-contact{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.6rem;font-size:0.8rem;font-weight:700;text-decoration:none;letter-spacing:0.04em;transition:all 0.2s}
+.btn-contact-gold{background:var(--gold);color:var(--navy)}
+.btn-contact-gold:hover{background:#d4b55f}
+.btn-contact-outline{border:1.5px solid rgba(255,255,255,0.6);color:var(--white)}
+.btn-contact-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─── BADGE ─── */
+.badge{display:inline-block;background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:700;padding:0.15rem 0.55rem;letter-spacing:0.08em;text-transform:uppercase;vertical-align:middle;margin-left:0.4rem}
+.badge.gold{background:var(--gold);color:var(--navy)}
+
+/* ─── ACCORDION ─── */
+.accordion{border:1px solid var(--border)}
+.accordion-item{border-bottom:1px solid var(--border)}
+.accordion-item:last-child{border-bottom:none}
+.accordion-btn{width:100%;background:none;border:none;padding:1rem 1.2rem;text-align:left;font-family:'Open Sans',sans-serif;font-size:0.88rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background 0.2s}
+.accordion-btn:hover{background:var(--offwh)}
+.accordion-btn .arrow{transition:transform 0.25s;font-size:0.7rem;color:var(--blue)}
+.accordion-btn.open .arrow{transform:rotate(180deg)}
+.accordion-body{display:none;padding:0 1.2rem 1.2rem;font-size:0.85rem;line-height:1.75;color:var(--mid)}
+.accordion-body.open{display:block}
+
+/* ─── FOOTER ─── */
+footer{background:#001a38;padding:2rem;text-align:center;color:rgba(255,255,255,0.3);font-size:0.75rem}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ─── ANIMATIONS ─── */
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* ─── MOBILE ─── */
+@media(max-width:768px){
+  .nav-inner{padding:0 1rem;flex-wrap:wrap}
+  .nav-brand{border-right:none;padding-right:0;width:100%;border-bottom:1px solid var(--border)}
+  .nav-tabs{overflow-x:auto;width:100%;gap:0}
+  .nav-tab{padding:0.9rem 1rem;font-size:0.73rem}
+  .nav-contact{display:none}
+  .hero-inner,.two-col{grid-template-columns:1fr;gap:2rem}
+  .hero-stats{display:grid;grid-template-columns:1fr 1fr}
+  .three-col,.four-col{grid-template-columns:1fr}
+  .content-section{padding:2.5rem 1.2rem}
+  .visa-table{font-size:0.78rem}
+  .contact-strip-btns{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── TOP BAR ─── -->
+<div class="topbar">
+  <span style="color:rgba(255,255,255,0.8);font-size:0.75rem;font-weight:600;letter-spacing:0.05em">BYU MARRIOTT SCHOOL OF BUSINESS</span>
+  <span class="tb-sep">|</span>
+  <span>MBA Program · Información para Candidatos Internacionales</span>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#" onclick="showSection('inicio');return false">
+      <div class="brand-text">
+        <div class="brand-title">MBA de BYU Marriott</div>
+        <div class="brand-sub">Provo, Utah · EE. UU.</div>
+      </div>
+    </a>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('inicio')">🏠 Inicio</button>
+      <button class="nav-tab" onclick="showSection('aplicar')">📋 Cómo Aplicar</button>
+      <button class="nav-tab" onclick="showSection('becas')">💰 Becas y Financiamiento</button>
+      <button class="nav-tab" onclick="showSection('visas')">🛂 Visas de Estudiante</button>
+      <button class="nav-tab" onclick="showSection('sobre')">👤 Sobre Mí</button>
+    </div>
+    <div class="nav-contact">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="nav-contact a btn-outline-sm">Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="nav-contact a btn-solid-sm">Agendar Cita</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 1: INICIO
+═══════════════════════════════════════════ -->
+<div id="inicio" class="page-section active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>La Maestría que <em>Transforma</em> Carreras y Comunidades</h1>
+        <p class="hero-desc">Un MBA es la llave para acelerar tu carrera, cambiar de industria, o lanzar tu emprendimiento. En BYU Marriott School of Business (la Facultad de Negocios de BYU Marriott) obtendrás educación de clase mundial a un costo <strong style="color:var(--gold)">40-50% menor</strong> que Harvard, Stanford o Wharton. Dos años que pueden transformar tu trayectoria profesional y tu capacidad para impactar tu comunidad.</p>
+        <div class="hero-actions">
+          <a href="#para-mi" onclick="document.getElementById('para-mi').scrollIntoView({behavior:'smooth'});return false" class="btn-hero-gold">¿Es para mí? →</a>
+          <a href="#" onclick="showSection('aplicar');return false" class="btn-hero-ghost">Cómo Aplicar</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-box">
+          <div class="stat-box-num">+78%</div>
+          <div class="stat-box-label">Aumento Promedio de Salario</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">$32K</div>
+          <div class="stat-box-label">Colegiatura total (miembros)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">#1</div>
+          <div class="stat-box-label">ROI en el Oeste de EE. UU.</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">#1</div>
+          <div class="stat-box-label">MBA Amigable para Familias</div>
+        </div>
+      </div>
+      <div style="text-align:center;padding:0;font-size:0.7rem;color:rgba(255,255,255,0.35);margin-top:0.5rem">Miembros: $32,000 · No miembros: $60,304 · Promedio otras escuelas top: $141,059</div>
+    </div>
+  </div>
+
+  <!-- ABOUT BYU -->
+  <div class="content-section">
+    <div class="content-inner">
+      <div class="two-col">
+        <div>
+          <p class="section-label">Acerca de BYU y el Programa</p>
+          <h2 class="section-heading">¿Qué es BYU y por qué su MBA?</h2>
+          <div class="section-body">
+            <p>La Universidad Brigham Young (BYU) es una universidad privada con más de 33,000 estudiantes, ubicada en Provo, Utah. Fue fundada y es patrocinada por <strong>La Iglesia de Jesucristo de los Santos de los Últimos Días</strong>. Esto da a BYU una cultura fuertemente orientada a valores, familia, ética y servicio — y es lo que hace su comunidad distinta a la de cualquier otra escuela de negocios del mundo.</p>
+            <p>La Facultad de Negocios lleva el nombre de J. Willard Marriott, fundador de la cadena hotelera Marriott International y egresado de BYU. Está clasificada consistentemente entre las mejores del país y como la <strong>#1 en valor</strong> en Estados Unidos.</p>
+            <p>¿Qué es exactamente un MBA? La Maestría en Administración de Negocios es un posgrado que desarrolla habilidades de liderazgo, pensamiento estratégico y gestión empresarial. A diferencia de una maestría técnica, el MBA te da una visión integral de los negocios. Es el grado más reconocido globalmente para quienes quieren acelerar su carrera, cambiar de industria, o lanzar su propio negocio. Empresas como McKinsey, Google, Goldman Sachs y las 500 empresas más grandes del mundo reclutan activamente en BYU cada año.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div class="card card-highlight">
+            <div class="card-icon">⛪</div>
+            <div class="card-title">BYU y La Iglesia de Jesucristo</div>
+            <div class="card-body">BYU es una universidad de La Iglesia de Jesucristo de los Santos de los Últimos Días. Estudiantes de cualquier religión y nacionalidad pueden aplicar al MBA. Sin embargo, la <strong>Beca Cardon (CIS)</strong> está disponible exclusivamente para miembros de la Iglesia en buen estado. Si tienes dudas sobre si esto aplica a ti, <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" style="color:var(--blue);text-decoration:underline;font-weight:600">contáctame</a>.</div>
+          </div>
+          <div class="card card-highlight">
+            <div class="card-icon">📜</div>
+            <div class="card-title">El Código de Honor de BYU</div>
+            <div class="card-body">Todos los estudiantes de BYU — sin importar su religión — se comprometen a seguir el Código de Honor de la universidad. Incluye principios de honestidad e integridad, abstenerse de alcohol, tabaco, café y té, vestir de forma modesta y respetar las normas de convivencia. Es parte del ambiente que hace de BYU una comunidad única.</div>
+          </div>
+          <div class="highlight-box" style="margin:0">
+            <strong>📍 ¿Dónde está BYU?</strong>
+            <p>Provo, Utah — a 45 minutos de Salt Lake City, en el corazón del corredor tecnológico de Utah. Ciudad segura, familiar y asequible, con comunidad latina activa y acceso a montañas, lagos y parques nacionales espectaculares.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ¿ES PARA MÍ? -->
+  <div id="para-mi" class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Autoevaluación</p>
+      <h2 class="section-heading">¿Es el MBA de BYU Para Mí?</h2>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--mid);max-width:70ch;margin:1rem 0 2rem">El MBA no es para todos, pero podría ser perfecto para ti si te identificas con alguno de estos perfiles:</p>
+      <div class="three-col">
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <div class="card-title">Quieres Acelerar tu Carrera</div>
+          <div class="card-body"><strong>Perfil:</strong> Tienes 2+ años de experiencia laboral y quieres pasar a posiciones de liderazgo, ganar más, o cambiarte a una empresa mejor.<br><br><strong>Realidad:</strong> El MBA acelera tu trayectoria 5–10 años. El egresado promedio de BYU gana $120K+ en su primer trabajo.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <div class="card-title">Quieres Cambiar de Industria</div>
+          <div class="card-body"><strong>Perfil:</strong> Trabajas en un área pero sueñas con otra — de ingeniería a finanzas, de administración a emprendimiento.<br><br><strong>Realidad:</strong> El MBA es el "reinicio" que necesitas. Muchos egresados cambiaron completamente de sector.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Tienes una Idea de Negocio</div>
+          <div class="card-body"><strong>Perfil:</strong> Quieres emprender pero te falta formación, contactos o acceso a financiamiento.<br><br><strong>Realidad:</strong> El área de Emprendimiento de BYU te conecta con inversionistas y recursos para lanzar desde casa.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌎</div>
+          <div class="card-title">Quieres Trabajar Globalmente</div>
+          <div class="card-body"><strong>Perfil:</strong> Tu meta es trabajar en empresas multinacionales, ya sea desde tu país o en el extranjero.<br><br><strong>Realidad:</strong> El MBA de BYU abre puertas en EE.UU. y en empresas internacionales en Latinoamérica.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💡</div>
+          <div class="card-title">Quieres Retornar con Mayor Valor</div>
+          <div class="card-body"><strong>Perfil:</strong> Eres de Latinoamérica, quieres ganar experiencia internacional y regresar a impactar tu país.<br><br><strong>Realidad:</strong> Muchos egresados regresan con salarios 2–3 veces más altos y mejor posicionamiento.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">El Costo es una Preocupación Real</div>
+          <div class="card-body"><strong>Perfil:</strong> Sin ayuda financiera no podrías costear un MBA en EE.UU.<br><br><strong>Realidad:</strong> Existe la Beca Cardon (CIS) — el apoyo más completo de BYU. Para miembros de la Iglesia que califican, cubre prácticamente todo.</div>
+        </div>
+      </div>
+      <div class="highlight-box" style="margin-top:2rem">
+        <strong>🎯 Si reconociste al menos 2 de estos perfiles, sigue leyendo.</strong>
+        <p>Más abajo encontrarás todo lo que necesitas saber: áreas de estudio, cómo aplicar, costos y cómo financiarlo. Si tienes dudas en cualquier punto, <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" style="color:var(--gold);text-decoration:underline;font-weight:700">contáctame directamente</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACKS -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Áreas de Especialización</p>
+      <h2 class="section-heading">Tracks — ¿En Qué te Especializas?</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Un <em>track</em> es el área de enfoque que eliges dentro del MBA. Piénsalo como tu "carrera dentro de la maestría" — te permite profundizar en la industria que más te interesa:</p>
+      <div class="three-col">
+        <div class="card card-highlight">
+          <div class="card-title">💼 Finanzas</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Análisis financiero, valoración de empresas, banca de inversión, gestión de portafolios de inversión.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Goldman Sachs, JP Morgan, Morgan Stanley, BlackRock, Fidelity, Banorte, Scotiabank, GBM.<br><br>
+            <strong>Salarios típicos:</strong> $150K–$200K USD en Nueva York; $80K–$120K USD regresando a Latinoamérica — entre 4 y 8 veces el salario promedio de un gerente en la región.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">🚀 Emprendimiento</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Creación y escalamiento de negocios, cómo obtener financiamiento, modelos de crecimiento, acceso a fondos de inversión privados.<br><br>
+            <strong>Qué hacen los egresados:</strong> Lanzan nuevas empresas, trabajan en fondos de inversión, regresan a crear empresas de tecnología agrícola, financiera o de servicios en sus países.<br><br>
+            <strong>Resultado típico:</strong> Red de contactos con inversionistas y herramientas concretas para escalar un negocio desde casa.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">📣 Mercadotecnia</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Estrategia de marca, análisis de mercados, mercadotecnia digital, comportamiento del consumidor.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Amazon, Apple, Google, Procter &amp; Gamble, Coca-Cola, Meta, Salesforce.<br><br>
+            <strong>Salarios típicos:</strong> $130K–$180K USD inicialmente; $70K–$100K USD en Latinoamérica en roles de liderazgo comercial.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">⛓️ Operaciones y Cadena de Suministro</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Cómo diseñar y optimizar los procesos internos de una empresa, logística global, gestión de riesgos, sustentabilidad.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Tesla, Walmart, Amazon Logistics, DHL, firmas de consultoría, manufactura global.<br><br>
+            <strong>Ventaja para Latinoamérica:</strong> La región necesita especialistas en logística global. Tu experiencia de regreso tiene un valor enorme.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">👥 Recursos Humanos Estratégicos</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Liderazgo organizacional, atracción y retención de talento, cultura empresarial, compensaciones y desarrollo de equipos de alto rendimiento.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Deloitte, Accenture, Amazon, empresas de consultoría de RRHH, áreas de talento en multinacionales.<br><br>
+            <strong>Salarios típicos:</strong> $110K–$150K USD en EE.UU.; $50K–$80K USD en Latinoamérica en posiciones directivas.
+          </div>
+        </div>
+      </div>
+      <a href="https://marriott.byu.edu/mba/academics/tracks/" target="_blank" class="card-link" style="display:block;margin-top:1.5rem">Ver descripción completa de cada track en marriott.byu.edu →</a>
+    </div>
+  </div>
+
+  <!-- VIDA EN PROVO -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Vida en Provo, Utah</p>
+      <h2 class="section-heading">¿Cómo es Vivir y Estudiar Ahí?</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Para un candidato latinoamericano, mudarse a Provo puede sonar intimidante. Aquí va un panorama honesto de lo que te espera:</p>
+      <div class="four-col">
+        <div class="card">
+          <div class="card-icon">💵</div>
+          <div class="card-title">Costo de Vida Accesible</div>
+          <div class="card-body">Provo es una de las ciudades universitarias más asequibles de EE. UU. La renta promedio de un departamento de 1 recámara ronda los $1,000–$1,300 USD/mes. Mucho menos que ciudades como Nueva York, San Francisco o Boston.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌿</div>
+          <div class="card-title">Naturaleza y Calidad de Vida</div>
+          <div class="card-body">Rodeada de montañas, a 45 minutos de Salt Lake City y cerca de parques nacionales como Zion, Bryce y Arches. Ideal para familias — ciudad segura, limpia y con buenas escuelas públicas para los hijos.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <div class="card-title">Comunidad Latina Activa</div>
+          <div class="card-body">BYU tiene una comunidad latinoamericana significativa tanto en el campus como en la ciudad. Muchos estudiantes del MBA son de México, Brasil, Argentina, Colombia y Chile. No estarás solo.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌡️</div>
+          <div class="card-title">Clima y Ritmo de Vida</div>
+          <div class="card-body">Cuatro estaciones — inviernos con nieve (perfectos para esquiar), veranos soleados y secos. El ritmo de vida en el campus es intenso académicamente, pero equilibrado con comunidad, deporte y actividades familiares.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESPECIALIZACIONES -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Opciones Académicas Adicionales</p>
+      <h2 class="section-heading">Especializaciones Dentro del MBA</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Además del track principal, puedes completar una especialización formal que aparece en tu diploma y profundiza tu expertise:</p>
+      <div class="three-col" style="margin-top:1rem">
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <div class="card-title">Finanzas</div>
+          <div class="card-body">Prepara a los estudiantes para trabajar en finanzas corporativas y con instituciones financieras. Ideal para quienes buscan puestos de gestión general o en empresas del sector financiero.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">👥</div>
+          <div class="card-title">Recursos Humanos Estratégicos</div>
+          <div class="card-body">Prepara a los estudiantes para gestionar el cambio organizacional, fortalecer la cultura y la experiencia de los empleados, y utilizar el análisis de datos para mejorar los procesos de las personas.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">📣</div>
+          <div class="card-title">Mercadotecnia</div>
+          <div class="card-body">Prepara a los estudiantes para los desafíos estratégicos al elegir mercados objetivo, ganar, retener y hacer crecer una base de clientes en un mercado global moderno.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">⛓️</div>
+          <div class="card-title">Operaciones y Cadena de Suministro</div>
+          <div class="card-body">Prepara a los estudiantes para responder a desafíos estratégicos y operacionales — desde el proceso de producción hasta la entrega al cliente final.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Emprendimiento</div>
+          <div class="card-body">Estructurada para desarrollar innovación y estrategia de lanzamiento al mercado. Cubre todos los aspectos: desde el concepto inicial hasta la estrategia de crecimiento y salida exitosa.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌎</div>
+          <div class="card-title">Énfasis, Minors y Certificados</div>
+          <div class="card-body">Negocios globales, impacto social, liderazgo en salud, y más opciones para personalizar tu experiencia. La especialización STEM permite hasta 36 meses de trabajo autorizado en EE. UU. con visa F-1.</div>
+          <a href="https://marriott.byu.edu/mba/academics/minors-certificates/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANKINGS -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Reconocimientos Nacionales</p>
+      <h2 class="section-heading">BYU Marriott en los Rankings</h2>
+      <div class="four-col" style="margin-top:2rem">
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA en Recursos Humanos</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">Retorno de Inversión — Oeste de EE. UU.</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">Preparación Ética para la Carrera</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA más Amigable para Familias</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#2</div>
+          <div class="card-title" style="margin-top:0.5rem">Facultad Inspiradora y Solidaria</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#3</div>
+          <div class="card-title" style="margin-top:0.5rem">Innovación</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#10</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA en Operaciones y Cadena de Suministro</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#13</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA para Emprendimiento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS STORIES -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Comunidad Internacional</p>
+      <h2 class="section-heading">Una Comunidad Global <em>Diversa y Fuerte</em></h2>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--mid);max-width:72ch;margin:1rem 0 0.5rem">El MBA de BYU cuenta con una comunidad internacional activa proveniente de decenas de países. Aunque el número de estudiantes latinoamericanos ha variado por año, el programa tiene una larga tradición de dar la bienvenida a candidatos de América Latina — y quienes han pasado por él comparten historias de crecimiento real. Aquí algunos ejemplos de esa trayectoria:</p>
+      <div class="three-col" style="margin-top:1.5rem">
+
+        <div class="story-card fade-in">
+          <p class="story-q">Venía de trabajar en Amazon en Costa Rica y quería dar un salto real en mi carrera. El MBA de BYU me dio la formación en Operaciones que buscaba — y me abrió la puerta a una pasantía en Tesla en Miami. Al graduarme iniciaré en Kelso Industries a tiempo completo. No es un camino que hubiera podido recorrer sin este programa.</p>
+          <div class="story-author">
+            <div class="story-init" style="background:var(--navy)">GM</div>
+            <div>
+              <div class="story-name">Graciela Monestel</div>
+              <div class="story-role">MBA 2do año · Costa Rica · Pasantía en Tesla, Miami FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card fade-in">
+          <p class="story-q">Tenía experiencia en Recursos Humanos trabajando en más de 13 países, pero quería llevar esa experiencia al siguiente nivel. El énfasis de BYU en RRHH estratégicos y mi pasantía en Citibank me dieron las herramientas para impactar organizaciones de forma mucho más profunda.</p>
+          <div class="story-author">
+            <div class="story-init" style="background:var(--blue)">GG</div>
+            <div>
+              <div class="story-name">Gianella Grandy</div>
+              <div class="story-role">MBA 1er año · Lima, Perú · Pasantía en Citibank</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card fade-in">
+          <p class="story-q">Con más de cinco años de experiencia en distintas industrias y una formación en Ingeniería Industrial, el MBA de BYU fue la combinación perfecta para especializarme en Operaciones. Mi pasantía en Oakland Construction fue una experiencia real con impacto directo desde el primer día.</p>
+          <div class="story-author">
+            <div class="story-init" style="background:var(--navy)">DP</div>
+            <div>
+              <div class="story-name">Diego Paez</div>
+              <div class="story-role">MBA 1er año · Perú / Argentina · Pasantía en Oakland Construction</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BRENNA PORTER QUOTE -->
+      <div style="background:var(--sky);padding:2.5rem 3rem;margin-top:2.5rem;position:relative;border-left:5px solid var(--navy)">
+        <div style="font-size:4rem;color:var(--navy);opacity:0.15;position:absolute;top:1rem;left:1.5rem;font-family:'Merriweather',serif;line-height:1">"</div>
+        <p style="font-family:'Merriweather',serif;font-size:1.1rem;font-style:italic;color:var(--navy);line-height:1.8;max-width:75ch;position:relative;z-index:1">El programa de MBA de BYU Marriott cambiará tu vida. Te enseñará a trabajar con personas, a trabajar en equipo y te sacará de tu zona de confort todos los días. Te estirará de muchas maneras. No hay forma de salir de eso sin cambios.</p>
+        <p style="font-size:0.8rem;font-weight:700;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-top:1.2rem">— Brenna Porter, MBA 2024</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINKS RESOURCES -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Recursos Oficiales</p>
+      <h2 class="section-heading">Todo en un Solo Lugar</h2>
+      <div class="link-grid" style="margin-top:2rem">
+        <a href="https://marriott.byu.edu/mba/about/overview/" target="_blank" class="link-item">
+          <div class="link-item-icon">🎓</div>
+          <div><span class="link-item-title">Página Oficial del MBA</span><span class="link-item-sub">Overview, currículo y rankings</span></div>
+        </a>
+        <a href="https://gradstudies.byu.edu/applying-to-byu-graduate-studies" target="_blank" class="link-item">
+          <div class="link-item-icon">📋</div>
+          <div><span class="link-item-title">Portal de Admisiones</span><span class="link-item-sub">Aplicar al programa</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/mba/career/careers/placement-profile/" target="_blank" class="link-item">
+          <div class="link-item-icon">📈</div>
+          <div><span class="link-item-title">Reporte de Empleo</span><span class="link-item-sub">Estadísticas y empresas</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/mba/about/class-profile/" target="_blank" class="link-item">
+          <div class="link-item-icon">👥</div>
+          <div><span class="link-item-title">Perfil de la Clase</span><span class="link-item-sub">Estadísticas del programa</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/information-sessions/" target="_blank" class="link-item">
+          <div class="link-item-icon">📅</div>
+          <div><span class="link-item-title">Sesiones Informativas</span><span class="link-item-sub">Eventos de reclutamiento</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/cis/" target="_blank" class="link-item">
+          <div class="link-item-icon">🌎</div>
+          <div><span class="link-item-title">Beca Cardon (CIS)</span><span class="link-item-sub">Financiamiento para internacionales</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <h3>¿Tienes preguntas? Estoy aquí para ayudarte.</h3>
+    <p>Soy estudiante actual del MBA de BYU y parte del equipo de reclutamiento. Escríbeme sin compromiso.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in Conectar en LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #inicio -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 2: CÓMO APLICAR
+═══════════════════════════════════════════ -->
+<div id="aplicar" class="page-section">
+
+  <div style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Proceso de Admisión</p>
+      <h2 class="section-heading">Cómo Aplicar al MBA de BYU</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">En BYU Marriott el proceso de admisión es <strong style="color:var(--blue)">integral</strong> — tu perfil completo importa, no solo un número. Aquí te explicamos todo lo que necesitas saber como candidato internacional.</p>
+    </div>
+  </div>
+
+  <!-- TIMELINE VISUAL -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">De Aquí a BYU</p>
+      <h2 class="section-heading">¿Cuánto Tiempo Toma Todo el Proceso?</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Si aplicas hoy, así luce el camino realista hacia tu primer día en Provo:</p>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;min-width:500px">
+        <div style="position:absolute;top:28px;left:8%;right:8%;height:3px;background:var(--border);z-index:0"></div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem;border:3px solid var(--blue)">📋</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Preparas papeles</div>
+          <div style="font-size:0.65rem;color:var(--muted)">4-8 semanas</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">📤</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Envías aplicación</div>
+          <div style="font-size:0.65rem;color:var(--muted)">1 día</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🤝</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Entrevista y admisión</div>
+          <div style="font-size:0.65rem;color:var(--muted)">3-6 semanas</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🌎</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">CIS (si aplica)</div>
+          <div style="font-size:0.65rem;color:var(--muted)">4-8 semanas</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🛂</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Visa</div>
+          <div style="font-size:0.65rem;color:var(--muted)">1-3 meses</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🎓</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">¡Empiezas en BYU!</div>
+          <div style="font-size:0.65rem;color:var(--muted)">Agosto 2027</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:2.5rem">
+        <div class="highlight-box" style="margin:0">
+          <strong>⏱️ Tiempo total estimado</strong>
+          <p>De 4 a 6 meses desde que empiezas a preparar papeles hasta que cruzas la frontera. Por eso recomendamos empezar lo antes posible.</p>
+        </div>
+        <div class="highlight-box gold" style="margin:0">
+          <strong>📅 Fecha ideal para empezar</strong>
+          <p>Si quieres entrar en agosto 2027, lo óptimo es tener tu aplicación lista entre septiembre y diciembre de 2026.</p>
+        </div>
+        <div class="highlight-box" style="margin:0">
+          <strong>🌎 Candidatos internacionales</strong>
+          <p>El trámite de visa puede tomar más tiempo según tu país. Empieza el proceso tan pronto como recibas tu carta de admisión.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESO GENERAL -->
+  <div class="content-section">
+    <div class="content-inner">
+      <div class="two-col">
+        <div>
+          <p class="section-label">El Proceso Paso a Paso</p>
+          <h2 class="section-heading">Tu Camino hacia el MBA</h2>
+          <div class="steps-list" style="margin-top:1.5rem">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Prepara tus papeles</h4>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:0.4rem">
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Calificaciones universitarias (en inglés y con equivalencia a GPA)</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Examen GMAT o GRE (o solicitud de exención si calificas)</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Currículum actualizado</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> 2 a 4 cartas de recomendación</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Ensayo: "Carta de intención"</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Examen de inglés (TOEFL, IELTS o Duolingo, si aplica)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>Envía tu aplicación</h4>
+                <p>A través del portal de BYU Graduate Studies. Las aplicaciones se revisan de forma continua — aplicar en la primera ronda da una ventaja real en becas y disponibilidad de lugares. <a href="https://gradstudies.byu.edu/applying-to-byu-graduate-studies" target="_blank">Ir al portal de aplicación →</a></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Entrevista (por invitación)</h4>
+                <p>Los candidatos más competitivos son invitados a una entrevista, ya sea en campus en Provo o de forma virtual. Es tu oportunidad de mostrar quién eres más allá del expediente. La decisión llega aproximadamente dos semanas después.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <h4>Carta de admisión y becas</h4>
+                <p>Si eres admitido, recibirás tu carta de aceptación junto con la información de tu beca o apoyo económico. Las becas por mérito no requieren aplicación separada. Una vez admitido puedes solicitar la Beca Cardon (CIS).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">05</div>
+              <div class="step-content">
+                <h4>Trámite de visa</h4>
+                <p>Según el tipo de apoyo financiero que recibas, inicias el proceso de visa F-1 o J-1. BYU te guía en cada paso a través de su Oficina de Estudiantes Internacionales. <a href="#" onclick="showSection('visas');return false">Ver comparación F-1 vs J-1 →</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="section-label">Criterios de Admisión</p>
+          <h2 class="section-heading">¿Qué evalúa BYU?</h2>
+          <p style="font-size:0.88rem;line-height:1.75;color:var(--mid);margin:0.8rem 0 1.2rem">BYU Marriott usa un proceso de admisión integral — evalúa tu perfil completo, no solo un número. Con una tasa de aceptación de aproximadamente <strong>45%</strong>, muchos candidatos son admitidos. Lo importante es que demuestres que tienes potencial y alineación con los valores de BYU. Aquí está lo que se evalúa:</p>
+
+          <ul class="req-list">
+            <li>
+              <div>
+                <strong>Promedio universitario (GPA)</strong><br>
+                <span style="font-weight:400">El GPA es el promedio general de tus calificaciones universitarias en la escala de Estados Unidos (0 a 4.0). El promedio de la clase de 2027 fue de 3.57. Si estudiaste fuera de EE. UU., es necesario que tú mismo tramites la traducción y equivalencia de tus calificaciones a través de un organismo autorizado por BYU (ver sección de requisitos internacionales abajo).</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>GMAT o GRE</strong><br>
+                <span style="font-weight:400">Son exámenes estandarizados que miden razonamiento verbal, matemático y analítico. El GMAT se califica en una escala de 205 a 805 puntos — un puntaje de 685 equivale aproximadamente al percentil 80 (mejor que el 80% de quienes lo presentan). El promedio del GMAT en la clase actual de BYU es de 685. Si el examen te genera dudas o crees que no calificarías, contáctame antes de tomarlo — existen casos en que BYU puede exentar el requisito.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Experiencia profesional</strong><br>
+                <span style="font-weight:400">Se recomienda un mínimo de 2 años de experiencia laboral a tiempo completo. Se valora la calidad y el nivel de responsabilidad, no solo los años de antigüedad.</span>
+                <div class="highlight-box" style="margin-top:0.7rem;padding:0.8rem 1rem">
+                  <strong style="font-size:0.82rem">Casos especiales:</strong>
+                  <ul style="margin-top:0.4rem;padding-left:1rem;font-size:0.82rem">
+                    <li style="margin-bottom:0.3rem">Si eres estudiante de <strong>BYU Pathway</strong>, trabajabas a tiempo completo mientras estudiabas y/o trabajaste antes de ingresar a la universidad, puedes solicitar que ese tiempo cuente como parte de los dos años de experiencia requerida.</li>
+                    <li>Si eres <strong>dueño de tu propio negocio</strong>, tu experiencia también puede tomarse en cuenta, aunque con algunas consideraciones adicionales. Contáctame para orientarte en cómo documentarlo.</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Ensayos personales</strong><br>
+                <span style="font-weight:400">Responderás preguntas como: ¿Por qué un MBA ahora? ¿Por qué BYU Marriott? ¿Cuáles son tus metas profesionales a largo plazo? Es tu espacio para contar tu historia.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Cartas de recomendación (2 o 3)</strong><br>
+                <span style="font-weight:400">Deben ser de personas que te conozcan profesionalmente y puedan hablar de tu capacidad de liderazgo, trabajo en equipo y potencial de crecimiento.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Entrevista</strong><br>
+                <span style="font-weight:400">Solo candidatos seleccionados son invitados. Evalúa habilidades de comunicación, liderazgo y alineación con los valores de BYU.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="highlight-box gold" style="margin-top:1.5rem">
+            <strong>💡 ¿Puedo no presentar el GMAT o GRE?</strong>
+            <p>Sí, en casos excepcionales BYU puede exentar el examen. Para solicitar la exención, debes indicarlo dentro de tu aplicación. El comité la revisará junto con el resto de tu expediente. Contáctame antes de aplicar y te ayudo a evaluar si tu perfil es candidato a la exención.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANDIDATOS INTERNACIONALES -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Candidatos Internacionales</p>
+      <h2 class="section-heading">Información para Candidatos Fuera de EE. UU.</h2>
+      <div class="two-col" style="margin-top:2rem">
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Requisitos de Inglés</h3>
+          <p style="font-size:0.85rem;line-height:1.75;color:var(--mid);margin-bottom:1rem">Si tu educación universitaria fue en español u otro idioma distinto al inglés, necesitas demostrar dominio del idioma con uno de estos exámenes:</p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1rem">
+            <div class="card" style="padding:1rem">
+              <div class="card-title">TOEFL iBT <span style="font-weight:400;color:var(--muted);font-size:0.78rem">— el más reconocido</span></div>
+              <div class="card-body">Mínimo recomendado: 85 puntos · Puntaje competitivo: 100+</div>
+            </div>
+            <div class="card" style="padding:1rem">
+              <div class="card-title">IELTS Academic</div>
+              <div class="card-body">Mínimo recomendado: 6.5 · Puntaje competitivo: 7.0+</div>
+            </div>
+            <div class="card" style="padding:1rem">
+              <div class="card-title">Duolingo English Test <span style="font-weight:400;color:var(--muted);font-size:0.78rem">— más accesible</span></div>
+              <div class="card-body">Mínimo: 105 puntos. Se presenta en línea, desde casa.</div>
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top:0.5rem">
+            <strong>ℹ️ ¿Cuándo puedo estar exento del examen de inglés?</strong>
+            <ul style="margin-top:0.4rem;padding-left:1.1rem">
+              <li>Si completaste tu título universitario en inglés</li>
+              <li>Si llevas 2 o más años viviendo y trabajando en un ambiente de habla inglesa</li>
+            </ul>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.8rem">Lista de Requisitos para Candidatos Internacionales</h3>
+          <ul class="req-list">
+            <li>Calificaciones universitarias oficiales traducidas al inglés y con equivalencia a GPA, tramitadas a través de <strong>IERF</strong> o <strong>TEC</strong> (los dos organismos autorizados por BYU para este proceso)</li>
+            <li>Examen de inglés: TOEFL, IELTS o Duolingo (salvo que estés exento — ver condiciones arriba)</li>
+            <li>Evidencia de recursos financieros o solicitud de la Beca Cardon (CIS)</li>
+            <li style="background:#FEF9EC;border-left-color:var(--gold)">Después de ser admitido: contar con todos los requisitos necesarios para obtener una visa de estudiante (tipo F-1 o J-1), incluyendo pasaporte vigente. Obtener o renovar el pasaporte puede tomar tiempo, por lo que conviene iniciar este proceso con anticipación.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Fechas Límite — Ciclo 2027–2028</h3>
+          <p style="font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:1.2rem">BYU revisa aplicaciones de forma continua dentro de cada ronda. Una vez completa tu aplicación, puedes esperar respuesta en aproximadamente 3 semanas.</p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.5rem">
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--gold);color:var(--navy);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">PRIORIDAD — BECAS</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Oct 2026</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Fecha límite para consideración prioritaria de becas. La mayoría de las becas se otorgan a candidatos de esta etapa.</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 1</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Dic 2026</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Mayor disponibilidad de lugares y tiempo suficiente para trámite de visa.</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 2 — INTERNACIONAL</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Ene 2027</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Fecha prioritaria para candidatos internacionales. Aún hay becas disponibles.</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--navy)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--navy);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 3 — LÍMITE INTERNACIONAL</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Mar 2027</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Fecha final para candidatos internacionales. También es el límite para solicitar la Beca Cardon (CIS).</p>
+            </div>
+          </div>
+
+          <div class="highlight-box red">
+            <strong>⚠️ Importante para candidatos internacionales</strong>
+            <p>Los candidatos de fuera de EE. UU. <strong>deben aplicar antes del 1 de marzo de 2026</strong> como fecha límite. Para maximizar tus posibilidades de beca, aplica antes del 15 de octubre de 2025. Mientras más temprano apliques, mejor.</p>
+          </div>
+          <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/international-admissions/" target="_blank" class="card-link" style="display:block;margin-top:1rem">Ver página oficial de candidatos internacionales →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-strip">
+    <h3>¿Dudas sobre tu aplicación?</h3>
+    <p>Puedo revisar contigo tu perfil y orientarte sobre los pasos a seguir antes de que apliques formalmente.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #aplicar -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 3: BECAS Y FINANCIAMIENTO
+═══════════════════════════════════════════ -->
+<div id="becas" class="page-section">
+
+  <div style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Ayuda Financiera</p>
+      <h2 class="section-heading">Becas, Financiamiento y Visas</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">El MBA de BYU ya es el más accesible de su categoría en EE. UU. Y además existen opciones de apoyo financiero diseñadas específicamente para candidatos internacionales.</p>
+    </div>
+  </div>
+
+  <!-- TIPOS DE AYUDA -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Panorama General</p>
+      <h2 class="section-heading">Tipos de Apoyo Financiero</h2>
+      <div class="three-col" style="margin-top:2rem">
+        <div class="card card-highlight">
+          <div class="card-icon">🏆</div>
+          <div class="card-title">Becas por Méritos Académicos</div>
+          <div class="card-body">Se otorgan automáticamente al momento de la admisión, basadas en el perfil académico y profesional del candidato. No requieren aplicación separada y reducen directamente el costo de la colegiatura. Disponibles para candidatos internacionales.</div>
+        </div>
+        <div class="card card-gold">
+          <div class="card-icon">🌎</div>
+          <div class="card-title">Beca Cardon (CIS)</div>
+          <div class="card-body">El patrocinio más completo disponible para estudiantes internacionales en BYU Marriott. Cubre colegiatura, libros, seguro médico y gastos de vida. Considerado el apoyo financiero de mayor prestigio de la Facultad.</div>
+          <a href="#cis-section" class="card-link">Ver todos los detalles ↓</a>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-icon">💼</div>
+          <div class="card-title">Pasantías (Prácticas Profesionales)</div>
+          <div class="card-body">Entre el primer y segundo año, los estudiantes realizan una pasantía remunerada que ayuda a cubrir los gastos del segundo año. Durante el segundo año también pueden trabajar dentro del campus de BYU.</div>
+        </div>
+      </div>
+
+      <!-- COST COMPARISON -->
+      <div style="margin-top:3rem">
+        <p class="section-label">Comparación de Costos — Colegiatura Total 2 Años</p>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.3rem;color:var(--navy);margin-bottom:0.5rem">BYU vs. Otras Escuelas Top de EE. UU.</h3>
+        <p style="font-size:0.85rem;color:var(--mid);margin-bottom:1.8rem">Menos deuda = Más libertad. La misma calidad, empleadores y red de contactos — a una fracción del precio.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--navy)">BYU Marriott — Miembros de la Iglesia</span>
+              <span style="font-size:0.88rem;font-weight:700;color:var(--blue)">$32,000</span>
+            </div>
+            <div style="background:var(--border);height:30px;border-radius:2px;overflow:hidden">
+              <div style="width:23%;height:100%;background:var(--blue);display:flex;align-items:center;padding-left:0.7rem">
+                <span style="font-size:0.68rem;color:white;font-weight:700">#1 Valor</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--navy)">BYU Marriott — No Miembros</span>
+              <span style="font-size:0.88rem;font-weight:700;color:var(--blue)">$60,304</span>
+            </div>
+            <div style="background:var(--border);height:30px;border-radius:2px;overflow:hidden">
+              <div style="width:43%;height:100%;background:var(--lblue);display:flex;align-items:center;padding-left:0.7rem">
+                <span style="font-size:0.68rem;color:white;font-weight:700">57% menos que el promedio</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--mid)">Promedio de las mejores escuelas de EE. UU.</span>
+              <span style="font-size:0.82rem;color:var(--mid)">$141,059</span>
+            </div>
+            <div style="background:var(--border);height:30px;border-radius:2px;overflow:hidden">
+              <div style="width:100%;height:100%;background:#94a3b8;display:flex;align-items:center;padding-left:0.7rem">
+                <span style="font-size:0.68rem;color:white;font-weight:700">Harvard, Stanford, Wharton, MIT...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNUAL COST BREAKDOWN -->
+      <div style="margin-top:2.5rem">
+        <p class="section-label">Desglose de Costos Anuales</p>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem">¿Cuánto necesito por año? (estudiante sin dependientes)</h3>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1rem">
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$16,000</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Colegiatura</div>
+          </div>
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$15,988</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Vivienda y Comida</div>
+          </div>
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$3,584</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Transporte</div>
+          </div>
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$2,864</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Gastos Personales</div>
+          </div>
+        </div>
+        <div style="background:var(--navy);padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center">
+          <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600">TOTAL ESTIMADO POR AÑO</span>
+          <span style="font-family:'Merriweather',serif;font-size:1.8rem;font-weight:700;color:var(--gold)">$38,496</span>
+        </div>
+        <p style="font-size:0.73rem;color:var(--muted);margin-top:0.6rem">*Costos sin dependientes. El monto aumenta según estado civil y tamaño de familia. Fuente: BYU Marriott MBA Info Session 2025.</p>
+      </div>
+
+      <a href="https://marriott.byu.edu/mba/costs-financial-aid/financial-aid/" target="_blank" class="card-link" style="display:block;margin-top:1.5rem">Ver página oficial de ayuda financiera →</a>
+    </div>
+  </div>
+
+  <!-- CIS SECTION -->
+  <div id="cis-section" class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">El Patrocinio de Mayor Prestigio</p>
+      <h2 class="section-heading">🌎 Beca Cardon — Cardon International Sponsorship (CIS)</h2>
+
+      <div class="highlight-box gold" style="margin-bottom:2rem">
+        <strong>¿Qué es el CIS?</strong>
+        <p>El Wilford A. Cardon International Sponsorship fue fundado en 1986 por Wilford A. Cardon — ex misionero en Brasil y miembro del Consejo Asesor de BYU Marriott. Su propósito es que la situación económica no sea un obstáculo para que estudiantes internacionales accedan a una educación de calidad en BYU.</p>
+        <p style="margin-top:0.6rem">Funciona de manera similar al Fondo Perpetuo para la Educación: los participantes se comprometen a salir de Estados Unidos al graduarse —de regreso a su país de origen u otro país fuera de EE. UU.— para fortalecer y contribuir a sus comunidades y ayudar a edificar el reino de Dios en cada país, tribu, lengua y pueblo. Al cumplir ese compromiso, se les condona <strong>2/3 del préstamo</strong>, y el tercio restante puede pagarse en un plazo de hasta <strong>20 años sin intereses</strong>.</p>
+        <p style="margin-top:0.6rem">Desde su fundación, <strong>272 estudiantes de más de 50 países</strong> han participado, incluyendo <strong>25 de México, 23 de Argentina, 15 de Chile y 6 de Colombia</strong>, entre otros. Es considerado el apoyo financiero de mayor prestigio otorgado por la Facultad de Negocios Marriott.</p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:1rem">¿Qué Cubre?</h3>
+          <ul class="req-list gold">
+            <li>Colegiatura completa del programa de MBA</li>
+            <li>Libros de texto y materiales académicos</li>
+            <li>Seguro médico durante el programa</li>
+            <li>Gastos de vida: renta (alquiler), pago de servicios, y un apoyo mensual para gastos personales como comida, higiene y transporte</li>
+          </ul>
+          <div class="highlight-box" style="margin-top:1.2rem">
+            <strong>⚠️ ¿Qué no cubre el CIS?</strong>
+            <p>El CIS cubre los semestres de otoño e invierno, pero <strong>no los meses de verano</strong> (primavera/verano). Durante ese período la mayoría de los estudiantes realizan su pasantía remunerada, lo que les permite cubrir sus gastos. Por ello, se requiere contar con al menos <strong>$8,000 USD de recursos propios</strong> al iniciar el programa — para cubrir gastos adicionales que el CIS no contempla y para el período de verano.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:1rem">Requisitos de Elegibilidad</h3>
+          <ul class="req-list">
+            <li><strong>Ser admitido primero.</strong> El CIS se solicita después de recibir tu carta de admisión. No es posible solicitarlo antes.</li>
+            <li><strong>Ser miembro activo de La Iglesia de Jesucristo de los Santos de los Últimos Días.</strong> El CIS es un programa administrado por la Iglesia y está disponible exclusivamente para miembros en buen estado.</li>
+            <li>Comprometerse a <strong>salir de EE. UU.</strong> al graduarse — regresar al país de origen u otro país fuera de EE. UU.</li>
+            <li>Calificar para visa <strong>J-1</strong> — el CIS no es compatible con la visa F-1.</li>
+            <li>Cumplir con el <strong>Código de Honor de BYU</strong> — el mismo que se exige a todos los estudiantes de la universidad.</li>
+            <li>Contar con al menos <strong>$8,000 USD de recursos propios</strong> para gastos no cubiertos y el período de verano.</li>
+            <li>Preferencia para quienes hayan residido fuera de EE. UU. y Canadá al menos <strong>1 año antes de aplicar</strong>.</li>
+            <li>No estar cursando ni planear cursar un doctorado (PhD) o grado conjunto.</li>
+          </ul>
+          <div class="highlight-box red" style="margin-top:1rem">
+            <strong>🛂 Importante: el CIS requiere visa J-1</strong>
+            <p>La visa J-1 está diseñada para quienes regresan a su país al terminar sus estudios. No permite quedarse a trabajar en EE. UU. de manera permanente, pero el cónyuge con visa J-2 <strong>sí puede trabajar</strong> durante el programa. Consulta la sección de Visas para entender todas las implicaciones.</p>
+          </div>
+          <a href="https://marriott.byu.edu/cis/criteria/" target="_blank" class="card-link" style="display:block;margin-top:1rem">Ver criterios completos en marriott.byu.edu/cis →</a>
+        </div>
+      </div>
+
+      <!-- FAQ CIS -->
+      <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:2.5rem 0 1rem">Preguntas Frecuentes sobre el CIS</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Cuándo aplico al CIS? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Primero debes ser admitido al programa de MBA. Una vez que tengas tu carta de admisión, entonces puedes iniciar la aplicación al CIS. No es posible solicitarlo antes.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Cuánto dinero recibo exactamente? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El monto varía según tu estado civil y el tamaño de tu familia. Para ver los niveles exactos de apoyo visita <a href="https://marriott.byu.edu/cis/levels-of-support/" target="_blank">marriott.byu.edu/cis/levels-of-support</a>. Contáctame si quieres que te ayude a interpretar esos números según tu situación.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Puedo traer a mi familia? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Sí. Tu cónyuge puede acompañarte con visa J-2 y tiene derecho a solicitar un permiso de trabajo en EE. UU. Tus hijos menores también pueden acompañarte. El monto del apoyo del CIS toma en cuenta el tamaño de tu familia.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Qué hago durante el verano si el CIS no cubre esos meses? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Durante el verano —entre el primer y segundo año— la mayoría de los estudiantes realizan una pasantía (práctica profesional) remunerada. Esos ingresos, junto con los $8,000 USD de recursos propios requeridos al inicio, permiten cubrir los gastos de ese período. El seguro médico del CIS sí continúa vigente durante el verano.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Con quién me comunico en BYU para saber más sobre el CIS? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El director del programa CIS es <strong>Kent Griffith</strong>. Puedes contactarlo en <strong>kent.griffith@byu.edu</strong> o al (801) 422-8165. También puedes visitar <a href="https://marriott.byu.edu/cis/contact/" target="_blank">marriott.byu.edu/cis/contact</a>. Si prefieres, contáctame primero y con gusto te oriento antes de que hables directamente con ellos.</div>
+        </div>
+      </div>
+
+      <!-- CIS TIMELINE -->
+      <div style="margin-top:2.5rem">
+        <p class="section-label">¿Cuándo sabes si calificas?</p>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;color:var(--navy);margin-bottom:1.5rem">Proceso y Tiempos del CIS</h3>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;overflow-x:auto">
+          <div style="position:absolute;top:28px;left:10%;right:10%;height:3px;background:var(--border);z-index:0"></div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">📋</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Aplicas al MBA</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Portal BYU</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">✉️</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Carta de Admisión</div>
+            <div style="font-size:0.68rem;color:var(--muted)">~3-4 semanas</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">🌎</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Aplicas al CIS</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Después de admisión</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">🛂</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Visa J-1</div>
+            <div style="font-size:0.68rem;color:var(--muted)">1-3 meses</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">🎓</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Inicias el MBA</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Agosto/Sept 2026</div>
+          </div>
+        </div>
+        <div class="highlight-box gold" style="margin-top:1.8rem">
+          <strong>⏱️ Recomendación de tiempo</strong>
+          <p>Para entrar en el otoño de 2027, lo ideal es aplicar al MBA antes de diciembre de 2026. Mientras antes apliques, más tiempo tendrás para el proceso del CIS y el trámite de visa — especialmente importante si vives lejos de un consulado americano.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISA SECTION MOVED -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Visas de Estudiante</p>
+      <h2 class="section-heading">¿Visa F-1 o J-1?</h2>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--mid);max-width:65ch;margin:0.8rem 0 1.5rem">El tipo de visa que necesitas depende de cómo financiarás tu programa. Esta es una de las decisiones más importantes del proceso — la comparación completa está en su propia sección.</p>
+      <a href="#" onclick="showSection('visas');return false" class="btn-gold" style="display:inline-block">Ver comparación F-1 vs J-1 →</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-strip">
+    <h3>¿Tienes dudas sobre la Beca Cardon o las visas?</h3>
+    <p>Te ayudo a entender qué opción se adapta mejor a tu situación personal y familiar.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #becas -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 4: VISAS DE ESTUDIANTE
+═══════════════════════════════════════════ -->
+<div id="visas" class="page-section">
+
+  <div style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Visas de Estudiante</p>
+      <h2 class="section-heading">¿Qué visa necesito para estudiar en BYU?</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">Una visa es el permiso oficial que otorga el gobierno de Estados Unidos para entrar y residir en el país con un propósito específico. Para estudiar en BYU existen dos tipos: la <strong style="color:var(--gold)">F-1</strong> y la <strong style="color:var(--gold)">J-1</strong>. Ambas te permiten estudiar, pero tienen reglas muy diferentes sobre trabajo, familia y lo que pasa al graduarte. Elegir la correcta desde el inicio es importante — y depende principalmente de cómo vas a financiar tu programa.</p>
+    </div>
+  </div>
+
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Antes de la tabla</p>
+      <h3 style="font-family:'Merriweather',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1rem">¿Por qué importa elegir desde el principio?</h3>
+      <div class="two-col" style="gap:2rem">
+        <div class="card card-highlight" style="border-top-color:var(--blue)">
+          <div class="card-title" style="font-size:1rem">Elige <span class="tag-f">F-1</span> si...</div>
+          <ul style="list-style:none;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.5rem">
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700">→</span> Financias el MBA con recursos propios o beca por mérito</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700">→</span> Quieres explorar trabajar en EE. UU. al graduarte</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700">→</span> Tu cónyuge no necesita trabajar mientras estudias</li>
+          </ul>
+        </div>
+        <div class="card card-gold">
+          <div class="card-title" style="font-size:1rem">Elige <span class="tag-j">J-1</span> si...</div>
+          <ul style="list-style:none;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.5rem">
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--gold);font-weight:700">→</span> Solicitas la Beca Cardon (CIS) — la J-1 es obligatoria</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--gold);font-weight:700">→</span> Planeas regresar a tu país al graduarte</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--gold);font-weight:700">→</span> Tu cónyuge necesita trabajar mientras estudias</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Comparación Detallada</p>
+      <h2 class="section-heading">Visa F-1 vs. Visa J-1</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:72ch;margin:0.8rem 0 2rem">Aquí están todas las diferencias relevantes para tomar la mejor decisión:</p>
+
+      <div style="overflow-x:auto">
+        <table class="visa-table">
+          <thead>
+            <tr>
+              <th>Tema</th>
+              <th><span class="tag-f">F-1</span>&nbsp; Visa de Estudiante</th>
+              <th><span class="tag-j">J-1</span>&nbsp; Visa de Intercambio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>¿Para quién aplica?</td>
+              <td>Estudiantes que se financian con recursos propios, becas por mérito de BYU, o financiamiento privado.</td>
+              <td>Requerida para participantes del programa <strong>Beca Cardon (CIS)</strong> y otros programas de intercambio.</td>
+            </tr>
+            <tr>
+              <td>¿Puedo trabajar mientras estudio?</td>
+              <td>Con visa F-1 puedes trabajar <strong>dentro del campus</strong> de BYU sin restricciones. También es posible trabajar <strong>fuera del campus con autorización previa</strong> — por ejemplo, mediante el programa CPT (Curricular Practical Training), que permite pasantías y trabajo práctico relacionado con tu área de estudio.</td>
+              <td>Permite trabajar dentro y, en algunos casos, fuera del campus durante el programa, con autorización previa.</td>
+            </tr>
+            <tr>
+              <td>¿Puedo trabajar al graduarme?</td>
+              <td>Sí — tienes derecho a un <strong>permiso de trabajo temporal</strong> de <strong>12 meses</strong> en EE. UU. para trabajar en tu área de estudio. Si cursaste la especialización en ciencia y tecnología (STEM), ese permiso se extiende hasta <strong>36 meses en total</strong>.</td>
+              <td>Sí — puedes trabajar hasta <strong>18 meses</strong> después de graduarte en EE. UU., en un puesto relacionado con tu programa de estudios.</td>
+            </tr>
+            <tr>
+              <td>¿Puede trabajar mi cónyuge?</td>
+              <td>❌ El cónyuge con visa dependiente (F-2) <strong>no puede trabajar</strong> legalmente en EE. UU.</td>
+              <td>✅ El cónyuge con visa dependiente (J-2) <strong>sí puede solicitar un permiso de trabajo</strong> en EE. UU.</td>
+            </tr>
+            <tr>
+              <td>¿Puedo quedarme a trabajar en EE. UU. después?</td>
+              <td>Es posible — un empleador puede patrocinarte para una <strong>visa de trabajo de largo plazo</strong> (el tipo más común para profesionales en EE. UU.) después de tu período de trabajo temporal.</td>
+              <td>Generalmente <strong>no</strong>. El J-1 está diseñado para quienes regresan a su país al terminar. Cambiar a una visa de trabajo permanente es muy difícil o imposible con esta visa.</td>
+            </tr>
+            <tr>
+              <td>¿Tengo que regresar a mi país?</td>
+              <td>No hay obligación formal de regresar.</td>
+              <td>Sí. La visa J-1 del CIS lleva el compromiso de <strong>regresar al país de origen</strong> al graduarse. Además, en algunos casos aplica una regla de 2 años de residencia en el país antes de poder cambiar a otro tipo de visa.</td>
+            </tr>
+            <tr>
+              <td>¿Es compatible con la Beca Cardon (CIS)?</td>
+              <td>❌ No. El CIS <strong>requiere visa J-1</strong> obligatoriamente.</td>
+              <td>✅ Sí. La Beca Cardon solo es posible con visa J-1.</td>
+            </tr>
+            <tr>
+              <td>Documento que emite BYU</td>
+              <td>Formulario <strong>I-20</strong> — lo presentas en el consulado americano de tu país.</td>
+              <td>Formulario <strong>DS-2019</strong> — lo presentas en el consulado americano de tu país.</td>
+            </tr>
+            <tr>
+              <td>Mejor opción si...</td>
+              <td>Quieres explorar la posibilidad de trabajar en EE. UU. después de graduarte, o si tu familia necesita también trabajar.</td>
+              <td>Planeas <strong>regresar a tu país</strong> al terminar el MBA. Ideal si recibes la Beca Cardon. También es mejor si tu cónyuge necesita trabajar mientras estudias.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box" style="margin-top:2rem">
+        <strong>ℹ️ Nota importante</strong>
+        <p>Esta comparación es informativa y no representa asesoría legal migratoria. Cada caso es diferente. BYU cuenta con una Oficina de Estudiantes Internacionales (ISSC) que te orienta en el proceso una vez que eres admitido. Para asesoría específica sobre tu situación, consulta a un especialista en inmigración.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Preguntas Frecuentes</p>
+      <h2 class="section-heading">Dudas Comunes sobre las Visas</h2>
+      <div class="accordion" style="margin-top:1.5rem">
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Cuándo necesito tramitar mi visa? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El trámite de visa comienza <strong>después de recibir tu carta de admisión</strong>. BYU emite el formulario correspondiente (I-20 o DS-2019) y con ese documento acudes al consulado americano en tu país. Los tiempos de espera varían — en algunos países la cita consular puede tardar semanas o meses, por lo que conviene iniciar el proceso lo antes posible.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Qué pasa si tengo visa F-1 pero luego quiero la Beca Cardon? <span class="arrow">▼</span></button>
+          <div class="accordion-body">La Beca Cardon (CIS) <strong>requiere visa J-1</strong> sin excepción. No puedes recibirla si entras con F-1. Por eso es importante decidir desde el inicio si planeas solicitar el CIS, para tramitar directamente la J-1.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Puedo traer a mis hijos con cualquiera de las dos visas? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Sí. Con ambas visas tus hijos pueden acompañarte como dependientes (F-2 o J-2). Los niños en edad escolar pueden asistir a escuelas públicas en Utah sin costo adicional.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Necesito pasaporte para aplicar al MBA? <span class="arrow">▼</span></button>
+          <div class="accordion-body">No — el pasaporte no es requisito durante el proceso de admisión. Sin embargo, sí lo necesitarás una vez que seas admitido para tramitar tu visa. Como obtener o renovar un pasaporte puede tomar tiempo (semanas o meses según el país), es recomendable iniciarlo con anticipación.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Qué es el OPT y cómo funciona para la F-1? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El OPT (Optional Practical Training) es un período de hasta <strong>12 meses</strong> en que puedes trabajar legalmente en EE. UU. en tu área de estudio, una vez que te gradúas con visa F-1. Si cursaste la especialización STEM, puedes extenderlo por 24 meses adicionales, para un total de hasta 3 años trabajando en EE. UU. después del MBA.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-strip">
+    <h3>¿Dudas sobre qué visa te conviene más?</h3>
+    <p>Cada situación es diferente. Contáctame y te ayudo a entender cuál es la mejor opción para ti y tu familia.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #visas -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 5: SOBRE MÍ
+═══════════════════════════════════════════ -->
+<div id="sobre" class="page-section">
+
+  <div style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Quién Soy</p>
+      <h2 class="section-heading">Sobre Mí</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">Soy estudiante de MBA en BYU Marriott y parte del equipo de BYU Ambassadors. Estoy aquí para ayudarte a navegar el proceso — sin complicaciones y en tu idioma.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="content-inner">
+      <div class="two-col" style="align-items:center;gap:4rem">
+
+        <!-- FOTO -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem">
+          <div style="width:220px;height:220px;border-radius:50%;background:var(--sky);border:4px solid var(--navy);overflow:hidden;display:flex;align-items:center;justify-content:center">
+            <!-- Para agregar tu foto: reemplaza el div de abajo con <img src="TU_FOTO.jpg" style="width:100%;height:100%;object-fit:cover;border-radius:50%"> -->
+            <div style="text-align:center;color:var(--navy);opacity:0.35">
+              <div style="font-size:5.5rem;line-height:1">👤</div>
+              <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.08em;margin-top:0.4rem">FOTO AQUÍ</div>
+            </div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:'Merriweather',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">Limhi Durán</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:0.35rem">MBA Candidate · BYU Marriott 2026</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:0.15rem">BYU MBA Ambassador · Originario de México</div>
+            <div style="display:flex;gap:0.75rem;justify-content:center;margin-top:1rem;flex-wrap:wrap">
+              <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline" style="padding:0.5rem 1rem;font-size:0.75rem">in LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HISTORIA -->
+        <div>
+          <p class="section-label">Mi Historia</p>
+          <h2 class="section-heading">Una Historia de <em>Propósito</em></h2>
+          <div class="section-body">
+            <p>Mi nombre es Limhi Durán, soy originario de México y gracias a la Beca Cardon (CIS) mi familia y yo pudimos venir a Provo para estudiar el MBA. Fue una bendición enorme — pero no llegó sola. El proceso de aplicación fue, en ocasiones, muy solitario. Muchas preguntas sin respuesta, mucha incertidumbre, y pocos recursos en español que realmente explicaran cómo funciona todo esto.</p>
+            <p>Ahora, como parte del equipo de BYU Ambassadors, quiero ser ese recurso que yo hubiera querido tener. Mi meta es ayudar a más personas a acceder a una educación de calidad global que les permita mejorar sus vidas y las de sus comunidades.</p>
+            <p>El MBA es un programa transformador. Gracias a él he crecido espiritual, profesional y mentalmente. La vida de mi familia ha sido grandemente bendecida al ser parte de esta comunidad. Si te interesa prepararte para aplicar, no tienes que hacerlo solo — puedes mandarme cualquier pregunta que tengas y con gusto intentaré ayudarte.</p>
+          </div>
+          <div class="highlight-box gold" style="margin-top:1.5rem">
+            <strong>🤝 Estoy aquí para ayudarte</strong>
+            <p>Puedo orientarte en el proceso de admisión, explicarte el CIS con más detalle, o simplemente responder las preguntas que nadie más te ha podido contestar. Sin compromiso y sin costo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-strip">
+    <h3>¿Listo para dar el siguiente paso?</h3>
+    <p>Escríbeme directamente — con gusto te acompaño en este proceso.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #sobre -->
+
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>Página creada por un estudiante actual del MBA de BYU Marriott · Esta es una iniciativa de reclutamiento estudiantil no oficial.</p>
+  <p style="margin-top:0.4rem">Información oficial en <a href="https://marriott.byu.edu/mba" target="_blank">marriott.byu.edu/mba</a> · Beca CIS: <a href="https://marriott.byu.edu/cis" target="_blank">marriott.byu.edu/cis</a></p>
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const tabs = document.querySelectorAll('.nav-tab');
+  const map = {inicio:0, aplicar:1, becas:2, visas:3, sobre:4};
+  tabs[map[id]].classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function toggleAccordion(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { body.classList.add('open'); btn.classList.add('open'); }
+}
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
