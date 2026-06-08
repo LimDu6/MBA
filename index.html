@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BYU Marriott MBA — Para Candidatos de Latinoamérica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light only;
+  --navy:   #002E5D;
+  --blue:   #0062B8;
+  --lblue:  #0078D4;
+  --sky:    #D6E8F7;
+  --gold:   #C8A951;
+  --white:  #FFFFFF;
+  --offwh:  #F5F7FA;
+  --border: #DDE4EE;
+  --text:   #1A2744;
+  --mid:    #4A5568;
+  --muted:  #7A8BA8;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;font-weight:400;color:var(--text);background:var(--white);overflow-x:hidden;color-scheme:light}
+
+/* ─── TOP BAR ─── */
+.topbar{background:var(--navy);padding:0.45rem 2rem;display:flex;align-items:center;gap:0.6rem}
+.topbar img{height:22px}
+.topbar span{color:rgba(255,255,255,0.82);font-size:0.72rem;letter-spacing:0.05em}
+.topbar .tb-sep{color:rgba(255,255,255,0.25);margin:0 0.3rem}
+
+/* ─── MAIN NAV ─── */
+nav{background:var(--white);border-bottom:3px solid var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,46,93,0.08)}
+.nav-inner{display:flex;align-items:stretch;max-width:1200px;margin:0 auto;padding:0 2rem}
+.nav-brand{display:flex;align-items:center;gap:0.75rem;padding:1rem 0;margin-right:2rem;text-decoration:none;border-right:1px solid var(--border);padding-right:2rem}
+.brand-text{line-height:1.2}
+.brand-title{font-size:0.78rem;font-weight:700;color:var(--navy);letter-spacing:0.03em}
+.brand-sub{font-size:0.65rem;color:var(--muted);font-weight:400}
+.nav-tabs{display:flex;gap:0}
+.nav-tab{background:none;border:none;padding:0 1.5rem;font-family:'Open Sans',sans-serif;font-size:0.8rem;font-weight:600;color:var(--mid);cursor:pointer;position:relative;letter-spacing:0.01em;transition:color 0.2s;white-space:nowrap}
+.nav-tab::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:transparent;transition:background 0.2s}
+.nav-tab.active{color:var(--navy)}
+.nav-tab.active::after,.nav-tab:hover::after{background:var(--blue)}
+.nav-tab:hover{color:var(--navy)}
+.nav-contact{margin-left:auto;display:flex;align-items:center;gap:0.5rem;padding:0.6rem 0}
+.nav-contact a{font-size:0.73rem;font-weight:600;padding:0.45rem 1rem;text-decoration:none;transition:all 0.2s}
+.btn-outline-sm{border:1.5px solid var(--navy);color:var(--navy)}
+.btn-outline-sm:hover{background:var(--navy);color:var(--white)}
+.btn-solid-sm{background:var(--blue);color:var(--white)}
+.btn-solid-sm:hover{background:var(--navy)}
+
+/* ─── SECTIONS ─── */
+.page-section{display:none}
+.page-section.active{display:block}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#004080 100%);color:var(--white);padding:4.5rem 2rem 4rem;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;right:-5%;top:-20%;width:60%;height:140%;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='100' cy='100' r='100' fill='%230062B8' fill-opacity='0.15'/%3E%3C/svg%3E") center/contain no-repeat;pointer-events:none}
+.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-block;background:rgba(200,169,81,0.2);border:1px solid rgba(200,169,81,0.4);color:var(--gold);font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.35rem 0.9rem;margin-bottom:1.2rem;font-weight:700}
+.hero h1{font-family:'Merriweather',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:0.95rem;color:rgba(255,255,255,0.92);line-height:1.8;margin-bottom:2rem;max-width:45ch}
+.hero-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-hero-gold{background:var(--gold);color:var(--navy);padding:0.8rem 1.8rem;font-size:0.8rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;text-decoration:none;transition:all 0.2s}
+.btn-hero-gold:hover{background:#d4b55f;transform:translateY(-2px)}
+.btn-hero-ghost{border:1.5px solid rgba(255,255,255,0.4);color:rgba(255,255,255,0.85);padding:0.8rem 1.8rem;font-size:0.8rem;font-weight:600;text-decoration:none;transition:all 0.2s}
+.btn-hero-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;position:relative;z-index:1}
+.stat-box{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);padding:1.5rem;text-align:center;backdrop-filter:blur(4px)}
+.stat-box-num{font-family:'Merriweather',serif;font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-box-label{font-size:0.72rem;color:rgba(255,255,255,0.82);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.35rem;font-weight:600}
+
+/* ─── GENERIC CONTENT ─── */
+.content-section{padding:4rem 2rem}
+.content-inner{max-width:1200px;margin:0 auto}
+.section-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue);font-weight:700;margin-bottom:0.6rem}
+.section-heading{font-family:'Merriweather',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--navy);margin-bottom:1rem;line-height:1.25}
+.section-heading em{font-style:italic;color:var(--blue)}
+.section-body{font-size:0.92rem;line-height:1.85;color:var(--mid);max-width:70ch}
+.section-body p+p{margin-top:0.85rem}
+.divider{height:1px;background:var(--border);margin:3rem 0}
+.bg-light{background:var(--offwh)}
+.bg-navy{background:var(--navy)}
+.bg-navy .section-heading,.bg-navy .section-label{color:var(--white)}
+.bg-navy .section-label{color:var(--gold)}
+.bg-navy .section-body{color:rgba(255,255,255,0.92)}
+
+/* ─── GRID LAYOUTS ─── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.four-col{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+
+/* ─── CARDS ─── */
+.card{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:box-shadow 0.2s,transform 0.2s}
+.card:hover{box-shadow:0 8px 24px rgba(0,46,93,0.09);transform:translateY(-3px)}
+.card-icon{font-size:1.8rem;margin-bottom:0.9rem}
+.card-title{font-size:0.92rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem}
+.card-body{font-size:0.83rem;line-height:1.65;color:var(--mid)}
+.card-link{display:inline-block;margin-top:0.9rem;font-size:0.78rem;font-weight:700;color:var(--blue);text-decoration:none}
+.card-link:hover{text-decoration:underline}
+.card-highlight{border-top:3px solid var(--blue)}
+.card-gold{border-top:3px solid var(--gold)}
+
+/* ─── STORY CARDS ─── */
+.story-card{background:var(--white);border:1px solid var(--border);padding:2rem;position:relative}
+.story-card::before{content:'\201C';position:absolute;top:1rem;right:1.5rem;font-family:'Merriweather',serif;font-size:4rem;color:var(--blue);opacity:0.12;line-height:1}
+.story-q{font-family:'Merriweather',serif;font-size:0.92rem;font-style:italic;line-height:1.7;color:var(--navy);margin-bottom:1.2rem}
+.story-author{display:flex;align-items:center;gap:0.7rem;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+.story-init{width:36px;height:36px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:0.82rem;font-weight:700;color:var(--gold);flex-shrink:0}
+.story-name{font-size:0.82rem;font-weight:700;color:var(--navy)}
+.story-role{font-size:0.73rem;color:var(--muted)}
+
+/* ─── STEPS ─── */
+.steps-list{display:flex;flex-direction:column;gap:0}
+.step-item{display:flex;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid var(--border)}
+.step-item:last-child{border-bottom:none}
+.step-num{width:40px;height:40px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.85rem;flex-shrink:0}
+.step-content h4{font-size:0.92rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem}
+.step-content p{font-size:0.85rem;line-height:1.7;color:var(--mid)}
+.step-content a{color:var(--blue);text-decoration:none}
+.step-content a:hover{text-decoration:underline}
+
+/* ─── REQUIREMENTS LIST ─── */
+.req-list{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.req-list li{display:flex;align-items:flex-start;gap:0.7rem;font-size:0.88rem;line-height:1.6;color:var(--mid);padding:0.7rem;background:var(--offwh);border-left:3px solid var(--blue)}
+.req-list li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.1rem}
+.req-list.gold li{border-color:var(--gold)}
+.req-list.gold li::before{color:var(--gold)}
+
+/* ─── VISA TABLE ─── */
+.visa-table{width:100%;border-collapse:collapse;font-size:0.85rem}
+.visa-table th{background:var(--navy);color:var(--white);padding:1rem 1.2rem;text-align:left;font-weight:700;font-size:0.8rem}
+.visa-table th:first-child{background:var(--mid)}
+.visa-table td{padding:0.9rem 1.2rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6;color:var(--mid)}
+.visa-table tr:nth-child(even) td{background:var(--offwh)}
+.visa-table td:first-child{font-weight:700;color:var(--navy);width:25%;background:var(--sky)!important}
+.tag-f{display:inline-block;background:#E8F0FD;color:#1a56db;font-size:0.72rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:3px;letter-spacing:0.05em}
+.tag-j{display:inline-block;background:#FEF3C7;color:#92400e;font-size:0.72rem;font-weight:700;padding:0.15rem 0.5rem;border-radius:3px;letter-spacing:0.05em}
+
+/* ─── HIGHLIGHT BOX ─── */
+.highlight-box{background:var(--sky);border:1px solid #b3d4ef;border-left:4px solid var(--blue);padding:1.4rem 1.6rem;margin:1.5rem 0}
+.highlight-box.gold{background:#FEF9EC;border-color:#e8d08a;border-left-color:var(--gold)}
+.highlight-box.red{background:#FEF2F2;border-color:#fca5a5;border-left-color:#ef4444}
+.highlight-box strong{color:var(--navy);font-size:0.88rem}
+.highlight-box p,.highlight-box ul{font-size:0.85rem;color:var(--mid);line-height:1.7;margin-top:0.4rem}
+.highlight-box ul{padding-left:1.1rem}
+
+/* ─── LINKS SECTION ─── */
+.link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.link-item{display:flex;align-items:center;gap:0.9rem;padding:1.1rem;border:1px solid var(--border);text-decoration:none;color:var(--navy);transition:all 0.2s}
+.link-item:hover{border-color:var(--blue);background:var(--sky)}
+.link-item-icon{width:34px;height:34px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.link-item-title{font-size:0.82rem;font-weight:700;display:block}
+.link-item-sub{font-size:0.72rem;color:var(--muted);margin-top:0.1rem}
+
+/* ─── CONTACT STRIP ─── */
+.contact-strip{background:var(--blue);padding:3rem 2rem;text-align:center}
+.contact-strip h3{font-family:'Merriweather',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.5rem}
+.contact-strip p{font-size:0.88rem;color:rgba(255,255,255,0.88);margin-bottom:1.8rem}
+.contact-strip-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-contact{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.6rem;font-size:0.8rem;font-weight:700;text-decoration:none;letter-spacing:0.04em;transition:all 0.2s}
+.btn-contact-gold{background:var(--gold);color:var(--navy)}
+.btn-contact-gold:hover{background:#d4b55f}
+.btn-contact-outline{border:1.5px solid rgba(255,255,255,0.6);color:var(--white)}
+.btn-contact-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─── BADGE ─── */
+.badge{display:inline-block;background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:700;padding:0.15rem 0.55rem;letter-spacing:0.08em;text-transform:uppercase;vertical-align:middle;margin-left:0.4rem}
+.badge.gold{background:var(--gold);color:var(--navy)}
+
+/* ─── ACCORDION ─── */
+.accordion{border:1px solid var(--border)}
+.accordion-item{border-bottom:1px solid var(--border)}
+.accordion-item:last-child{border-bottom:none}
+.accordion-btn{width:100%;background:none;border:none;padding:1rem 1.2rem;text-align:left;font-family:'Open Sans',sans-serif;font-size:0.88rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background 0.2s}
+.accordion-btn:hover{background:var(--offwh)}
+.accordion-btn .arrow{transition:transform 0.25s;font-size:0.7rem;color:var(--blue)}
+.accordion-btn.open .arrow{transform:rotate(180deg)}
+.accordion-body{display:none;padding:0 1.2rem 1.2rem;font-size:0.85rem;line-height:1.75;color:var(--mid)}
+.accordion-body.open{display:block}
+
+/* ─── FOOTER ─── */
+footer{background:#001a38;padding:2rem;text-align:center;color:rgba(255,255,255,0.3);font-size:0.75rem}
+footer a{color:var(--gold);text-decoration:none}
+
+/* ─── ANIMATIONS ─── */
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.55s ease,transform 0.55s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* ─── MOBILE ─── */
+@media(max-width:768px){
+
+  /* Topbar */
+  .topbar{padding:0.35rem 1rem;gap:0.4rem}
+  .topbar span:last-child{display:none}
+  .topbar .tb-sep{display:none}
+
+  /* Nav */
+  .nav-inner{padding:0 0.75rem;flex-wrap:wrap}
+  .nav-brand{border-right:none;padding:0.65rem 0;width:100%;border-bottom:1px solid var(--border)}
+  .brand-title{font-size:0.73rem}
+  .nav-tabs{overflow-x:auto;width:100%;gap:0;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+  .nav-tabs::-webkit-scrollbar{display:none}
+  .nav-tab{padding:0.8rem 0.85rem;font-size:0.68rem;flex-shrink:0}
+  .nav-contact{display:none}
+
+  /* Hero */
+  .hero{padding:2.2rem 1.1rem 2.2rem}
+  .hero-inner{grid-template-columns:1fr;gap:1.8rem}
+  .hero-desc{font-size:0.88rem}
+  .hero-actions{gap:0.5rem}
+  .btn-hero-gold,.btn-hero-ghost{padding:0.7rem 1.2rem;font-size:0.75rem}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:0.7rem}
+  .stat-box{padding:1rem 0.8rem}
+  .stat-box-num{font-size:1.6rem}
+  .stat-box-label{font-size:0.65rem}
+
+  /* Section headers */
+  .section-header-bar{padding:1.8rem 1rem 1.5rem !important}
+
+  /* Content */
+  .content-section{padding:2rem 1rem}
+  .content-inner{padding:0}
+
+  /* Grids */
+  .two-col{grid-template-columns:1fr;gap:1.5rem}
+  .three-col,.four-col{grid-template-columns:1fr;gap:1rem}
+
+  /* Timelines — scroll horizontalmente con indicador visual */
+  .timeline-grid{overflow-x:auto;-webkit-overflow-scrolling:touch;display:flex !important;gap:0 !important;min-width:unset !important;padding-bottom:0.5rem}
+  .timeline-grid > div{min-width:90px;flex-shrink:0}
+  .cis-timeline-grid{overflow-x:auto;-webkit-overflow-scrolling:touch;display:flex !important;gap:0 !important;padding-bottom:0.5rem}
+  .cis-timeline-grid > div:not([style*="position:absolute"]){min-width:85px;flex-shrink:0}
+
+  /* Summary grid (3 cajas bajo timeline) */
+  .summary-grid{grid-template-columns:1fr !important;gap:0.75rem !important}
+
+  /* Cost breakdown grid (4 columnas → 2x2) */
+  .cost-grid{grid-template-columns:1fr 1fr !important;gap:0.75rem !important}
+
+  /* Cards */
+  .card{padding:1.2rem}
+  .card-icon{font-size:1.4rem;margin-bottom:0.6rem}
+
+  /* Story cards */
+  .story-card{padding:1.2rem}
+
+  /* Steps */
+  .step-item{gap:1rem;padding:1.2rem 0}
+  .step-num{width:34px;height:34px;font-size:0.78rem;flex-shrink:0}
+
+  /* Table */
+  .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--border)}
+  .visa-table{font-size:0.78rem;min-width:540px}
+
+  /* Highlight box */
+  .highlight-box{padding:1rem 1.1rem}
+
+  /* Contact strip */
+  .contact-strip{padding:2rem 1rem}
+  .contact-strip h3{font-size:1.1rem}
+  .contact-strip-btns{flex-direction:column;align-items:stretch;gap:0.6rem}
+  .btn-contact{justify-content:center;padding:0.7rem 1rem}
+
+  /* Section headings */
+  .section-heading{font-size:clamp(1.3rem,5vw,1.7rem)}
+
+  /* Accordion */
+  .accordion-btn{font-size:0.82rem;padding:0.9rem 1rem}
+
+  /* Divider */
+  .divider{margin:2rem 0}
+}
+
+/* Tablet intermediate breakpoint */
+@media(max-width:1024px) and (min-width:769px){
+  .four-col{grid-template-columns:repeat(2,1fr)}
+  .content-section{padding:3rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ─── TOP BAR ─── -->
+<div class="topbar">
+  <span style="color:rgba(255,255,255,0.8);font-size:0.75rem;font-weight:600;letter-spacing:0.05em">BYU MARRIOTT SCHOOL OF BUSINESS</span>
+  <span class="tb-sep">|</span>
+  <span>MBA Program · Información para Candidatos Internacionales</span>
+</div>
+
+<!-- ─── NAV ─── -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#" onclick="showSection('inicio');return false">
+      <div class="brand-text">
+        <div class="brand-title">MBA de BYU Marriott</div>
+        <div class="brand-sub">Provo, Utah · EE. UU.</div>
+      </div>
+    </a>
+    <div class="nav-tabs">
+      <button class="nav-tab active" onclick="showSection('inicio')">🏠 Inicio</button>
+      <button class="nav-tab" onclick="showSection('aplicar')">📋 Cómo Aplicar</button>
+      <button class="nav-tab" onclick="showSection('becas')">💰 Becas y Financiamiento</button>
+      <button class="nav-tab" onclick="showSection('visas')">🛂 Visas de Estudiante</button>
+      <button class="nav-tab" onclick="showSection('sobre')">👤 Sobre Mí</button>
+    </div>
+    <div class="nav-contact">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="nav-contact a btn-outline-sm">Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="nav-contact a btn-solid-sm">Agendar Cita</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 1: INICIO
+═══════════════════════════════════════════ -->
+<div id="inicio" class="page-section active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>La Maestría que <em>Transforma</em> Carreras y Comunidades</h1>
+        <p class="hero-desc">Un MBA es la llave para acelerar tu carrera, cambiar de industria, o lanzar tu emprendimiento. En BYU Marriott School of Business (la Facultad de Negocios de BYU Marriott) obtendrás educación de clase mundial a un costo <strong style="color:var(--gold)">40-50% menor</strong> que Harvard, Stanford o Wharton. Dos años que pueden transformar tu trayectoria profesional y tu capacidad para impactar tu comunidad.</p>
+        <div class="hero-actions">
+          <a href="#para-mi" onclick="document.getElementById('para-mi').scrollIntoView({behavior:'smooth'});return false" class="btn-hero-gold">¿Es para mí? →</a>
+          <a href="#" onclick="showSection('aplicar');return false" class="btn-hero-ghost">Cómo Aplicar</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-box">
+          <div class="stat-box-num">+78%</div>
+          <div class="stat-box-label">Aumento Promedio de Salario</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">$32K</div>
+          <div class="stat-box-label">Colegiatura total (miembros)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">#1</div>
+          <div class="stat-box-label">ROI en el Oeste de EE. UU.</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box-num">#1</div>
+          <div class="stat-box-label">MBA Amigable para Familias</div>
+        </div>
+      </div>
+      <div style="text-align:center;padding:0;font-size:0.7rem;color:rgba(255,255,255,0.35);margin-top:0.5rem">Miembros: $32,000 · No miembros: $60,304 · Promedio otras escuelas top: $141,059</div>
+    </div>
+  </div>
+
+  <!-- ABOUT BYU -->
+  <div class="content-section">
+    <div class="content-inner">
+      <div class="two-col">
+        <div>
+          <p class="section-label">Acerca de BYU y el Programa</p>
+          <h2 class="section-heading">¿Qué es BYU y por qué su MBA?</h2>
+          <div class="section-body">
+            <p>La Universidad Brigham Young (BYU) es una universidad privada con más de 33,000 estudiantes, ubicada en Provo, Utah. Fue fundada y es patrocinada por <strong>La Iglesia de Jesucristo de los Santos de los Últimos Días</strong>. Esto da a BYU una cultura fuertemente orientada a valores, familia, ética y servicio — y es lo que hace su comunidad distinta a la de cualquier otra escuela de negocios del mundo.</p>
+            <p>La Facultad de Negocios lleva el nombre de J. Willard Marriott, fundador de la cadena hotelera Marriott International y egresado de BYU. Está clasificada consistentemente entre las mejores del país y como la <strong>#1 en valor</strong> en Estados Unidos.</p>
+            <p>¿Qué es exactamente un MBA? La Maestría en Administración de Negocios es un posgrado que desarrolla habilidades de liderazgo, pensamiento estratégico y gestión empresarial. A diferencia de una maestría técnica, el MBA te da una visión integral de los negocios. Es el grado más reconocido globalmente para quienes quieren acelerar su carrera, cambiar de industria, o lanzar su propio negocio. Empresas como McKinsey, Google, Goldman Sachs y las 500 empresas más grandes del mundo reclutan activamente en BYU cada año.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div class="card card-highlight">
+            <div class="card-icon">⛪</div>
+            <div class="card-title">BYU y La Iglesia de Jesucristo</div>
+            <div class="card-body">BYU es una universidad de La Iglesia de Jesucristo de los Santos de los Últimos Días. Estudiantes de cualquier religión y nacionalidad pueden aplicar al MBA. Sin embargo, la <strong>Beca Cardon (CIS)</strong> está disponible exclusivamente para miembros de la Iglesia en buen estado. Si tienes dudas sobre si esto aplica a ti, <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" style="color:var(--blue);text-decoration:underline;font-weight:600">contáctame</a>.</div>
+          </div>
+          <div class="card card-highlight">
+            <div class="card-icon">📜</div>
+            <div class="card-title">El Código de Honor de BYU</div>
+            <div class="card-body">Todos los estudiantes de BYU — sin importar su religión — se comprometen a seguir el Código de Honor de la universidad. Incluye principios de honestidad e integridad, abstenerse de alcohol, tabaco, café y té, vestir de forma modesta y respetar las normas de convivencia. Es parte del ambiente que hace de BYU una comunidad única.</div>
+          </div>
+          <div class="highlight-box" style="margin:0">
+            <strong>📍 ¿Dónde está BYU?</strong>
+            <p>Provo, Utah — a 45 minutos de Salt Lake City, en el corazón del corredor tecnológico de Utah. Ciudad segura, familiar y asequible, con comunidad latina activa y acceso a montañas, lagos y parques nacionales espectaculares.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ¿ES PARA MÍ? -->
+  <div id="para-mi" class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Autoevaluación</p>
+      <h2 class="section-heading">¿Es el MBA de BYU Para Mí?</h2>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--mid);max-width:70ch;margin:1rem 0 2rem">El MBA no es para todos, pero podría ser perfecto para ti si te identificas con alguno de estos perfiles:</p>
+      <div class="three-col">
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <div class="card-title">Quieres Acelerar tu Carrera</div>
+          <div class="card-body"><strong>Perfil:</strong> Tienes 2+ años de experiencia laboral y quieres pasar a posiciones de liderazgo, ganar más, o cambiarte a una empresa mejor.<br><br><strong>Realidad:</strong> El MBA acelera tu trayectoria 5–10 años. El egresado promedio de BYU gana $120K+ en su primer trabajo.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔄</div>
+          <div class="card-title">Quieres Cambiar de Industria</div>
+          <div class="card-body"><strong>Perfil:</strong> Trabajas en un área pero sueñas con otra — de ingeniería a finanzas, de administración a emprendimiento.<br><br><strong>Realidad:</strong> El MBA es el "reinicio" que necesitas. Muchos egresados cambiaron completamente de sector.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Tienes una Idea de Negocio</div>
+          <div class="card-body"><strong>Perfil:</strong> Quieres emprender pero te falta formación, contactos o acceso a financiamiento.<br><br><strong>Realidad:</strong> El área de Emprendimiento de BYU te conecta con inversionistas y recursos para lanzar desde casa.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌎</div>
+          <div class="card-title">Quieres Trabajar Globalmente</div>
+          <div class="card-body"><strong>Perfil:</strong> Tu meta es trabajar en empresas multinacionales, ya sea desde tu país o en el extranjero.<br><br><strong>Realidad:</strong> El MBA de BYU abre puertas en EE.UU. y en empresas internacionales en Latinoamérica.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💡</div>
+          <div class="card-title">Quieres Retornar con Mayor Valor</div>
+          <div class="card-body"><strong>Perfil:</strong> Eres de Latinoamérica, quieres ganar experiencia internacional y regresar a impactar tu país.<br><br><strong>Realidad:</strong> Muchos egresados regresan con salarios 2–3 veces más altos y mejor posicionamiento.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">El Costo es una Preocupación Real</div>
+          <div class="card-body"><strong>Perfil:</strong> Sin ayuda financiera no podrías costear un MBA en EE.UU.<br><br><strong>Realidad:</strong> Existe la Beca Cardon (CIS) — el apoyo más completo de BYU. Para miembros de la Iglesia que califican, cubre prácticamente todo.</div>
+        </div>
+      </div>
+      <div class="highlight-box" style="margin-top:2rem">
+        <strong>🎯 Si reconociste al menos 2 de estos perfiles, sigue leyendo.</strong>
+        <p>Más abajo encontrarás todo lo que necesitas saber: áreas de estudio, cómo aplicar, costos y cómo financiarlo. Si tienes dudas en cualquier punto, <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" style="color:var(--gold);text-decoration:underline;font-weight:700">contáctame directamente</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRACKS -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Áreas de Especialización</p>
+      <h2 class="section-heading">Tracks — ¿En Qué te Especializas?</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Un <em>track</em> es el área de enfoque que eliges dentro del MBA. Piénsalo como tu "carrera dentro de la maestría" — te permite profundizar en la industria que más te interesa:</p>
+      <div class="three-col">
+        <div class="card card-highlight">
+          <div class="card-title">💼 Finanzas</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Análisis financiero, valoración de empresas, banca de inversión, gestión de portafolios de inversión.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Goldman Sachs, JP Morgan, Morgan Stanley, BlackRock, Fidelity, Banorte, Scotiabank, GBM.<br><br>
+            <strong>Salarios típicos:</strong> $150K–$200K USD en Nueva York; $80K–$120K USD regresando a Latinoamérica — entre 4 y 8 veces el salario promedio de un gerente en la región.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">🚀 Emprendimiento</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Creación y escalamiento de negocios, cómo obtener financiamiento, modelos de crecimiento, acceso a fondos de inversión privados.<br><br>
+            <strong>Qué hacen los egresados:</strong> Lanzan nuevas empresas, trabajan en fondos de inversión, regresan a crear empresas de tecnología agrícola, financiera o de servicios en sus países.<br><br>
+            <strong>Resultado típico:</strong> Red de contactos con inversionistas y herramientas concretas para escalar un negocio desde casa.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">📣 Mercadotecnia</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Estrategia de marca, análisis de mercados, mercadotecnia digital, comportamiento del consumidor.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Amazon, Apple, Google, Procter &amp; Gamble, Coca-Cola, Meta, Salesforce.<br><br>
+            <strong>Salarios típicos:</strong> $130K–$180K USD inicialmente; $70K–$100K USD en Latinoamérica en roles de liderazgo comercial.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">⛓️ Operaciones y Cadena de Suministro</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Cómo diseñar y optimizar los procesos internos de una empresa, logística global, gestión de riesgos, sustentabilidad.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Tesla, Walmart, Amazon Logistics, DHL, firmas de consultoría, manufactura global.<br><br>
+            <strong>Ventaja para Latinoamérica:</strong> La región necesita especialistas en logística global. Tu experiencia de regreso tiene un valor enorme.
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">👥 Recursos Humanos Estratégicos</div>
+          <div class="card-body">
+            <strong>Qué aprenderás:</strong> Liderazgo organizacional, atracción y retención de talento, cultura empresarial, compensaciones y desarrollo de equipos de alto rendimiento.<br><br>
+            <strong>Dónde trabajan los egresados:</strong> Deloitte, Accenture, Amazon, empresas de consultoría de RRHH, áreas de talento en multinacionales.<br><br>
+            <strong>Salarios típicos:</strong> $110K–$150K USD en EE.UU.; $50K–$80K USD en Latinoamérica en posiciones directivas.
+          </div>
+        </div>
+      </div>
+      <a href="https://marriott.byu.edu/mba/academics/tracks/" target="_blank" class="card-link" style="display:block;margin-top:1.5rem">Ver descripción completa de cada track en marriott.byu.edu →</a>
+    </div>
+  </div>
+
+  <!-- VIDA EN PROVO -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Vida en Provo, Utah</p>
+      <h2 class="section-heading">¿Cómo es Vivir y Estudiar Ahí?</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Para un candidato latinoamericano, mudarse a Provo puede sonar intimidante. Aquí va un panorama honesto de lo que te espera:</p>
+      <div class="four-col">
+        <div class="card">
+          <div class="card-icon">💵</div>
+          <div class="card-title">Costo de Vida Accesible</div>
+          <div class="card-body">Provo es una de las ciudades universitarias más asequibles de EE. UU. La renta promedio de un departamento de 1 recámara ronda los $1,000–$1,300 USD/mes. Mucho menos que ciudades como Nueva York, San Francisco o Boston.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌿</div>
+          <div class="card-title">Naturaleza y Calidad de Vida</div>
+          <div class="card-body">Rodeada de montañas, a 45 minutos de Salt Lake City y cerca de parques nacionales como Zion, Bryce y Arches. Ideal para familias — ciudad segura, limpia y con buenas escuelas públicas para los hijos.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <div class="card-title">Comunidad Latina Activa</div>
+          <div class="card-body">BYU tiene una comunidad latinoamericana significativa tanto en el campus como en la ciudad. Muchos estudiantes del MBA son de México, Brasil, Argentina, Colombia y Chile. No estarás solo.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌡️</div>
+          <div class="card-title">Clima y Ritmo de Vida</div>
+          <div class="card-body">Cuatro estaciones — inviernos con nieve (perfectos para esquiar), veranos soleados y secos. El ritmo de vida en el campus es intenso académicamente, pero equilibrado con comunidad, deporte y actividades familiares.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESPECIALIZACIONES -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Opciones Académicas Adicionales</p>
+      <h2 class="section-heading">Especializaciones Dentro del MBA</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Además del track principal, puedes completar una especialización formal que aparece en tu diploma y profundiza tu expertise:</p>
+      <div class="three-col" style="margin-top:1rem">
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <div class="card-title">Finanzas</div>
+          <div class="card-body">Prepara a los estudiantes para trabajar en finanzas corporativas y con instituciones financieras. Ideal para quienes buscan puestos de gestión general o en empresas del sector financiero.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">👥</div>
+          <div class="card-title">Recursos Humanos Estratégicos</div>
+          <div class="card-body">Prepara a los estudiantes para gestionar el cambio organizacional, fortalecer la cultura y la experiencia de los empleados, y utilizar el análisis de datos para mejorar los procesos de las personas.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">📣</div>
+          <div class="card-title">Mercadotecnia</div>
+          <div class="card-body">Prepara a los estudiantes para los desafíos estratégicos al elegir mercados objetivo, ganar, retener y hacer crecer una base de clientes en un mercado global moderno.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">⛓️</div>
+          <div class="card-title">Operaciones y Cadena de Suministro</div>
+          <div class="card-body">Prepara a los estudiantes para responder a desafíos estratégicos y operacionales — desde el proceso de producción hasta la entrega al cliente final.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚀</div>
+          <div class="card-title">Emprendimiento</div>
+          <div class="card-body">Estructurada para desarrollar innovación y estrategia de lanzamiento al mercado. Cubre todos los aspectos: desde el concepto inicial hasta la estrategia de crecimiento y salida exitosa.</div>
+          <a href="https://marriott.byu.edu/mba/academics/specializations/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌎</div>
+          <div class="card-title">Énfasis, Minors y Certificados</div>
+          <div class="card-body">Negocios globales, impacto social, liderazgo en salud, y más opciones para personalizar tu experiencia. La especialización STEM permite hasta 36 meses de trabajo autorizado en EE. UU. con visa F-1.</div>
+          <a href="https://marriott.byu.edu/mba/academics/minors-certificates/" target="_blank" class="card-link">Ver más →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANKINGS -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Reconocimientos Nacionales</p>
+      <h2 class="section-heading">BYU Marriott en los Rankings</h2>
+      <div class="four-col" style="margin-top:2rem">
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA en Recursos Humanos</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">Retorno de Inversión — Oeste de EE. UU.</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">Preparación Ética para la Carrera</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--gold)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1">#1</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA más Amigable para Familias</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#2</div>
+          <div class="card-title" style="margin-top:0.5rem">Facultad Inspiradora y Solidaria</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#3</div>
+          <div class="card-title" style="margin-top:0.5rem">Innovación</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#10</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA en Operaciones y Cadena de Suministro</div>
+        </div>
+        <div class="card" style="text-align:center;border-top:3px solid var(--blue)">
+          <div style="font-family:'Merriweather',serif;font-size:2.5rem;font-weight:700;color:var(--blue);line-height:1">#13</div>
+          <div class="card-title" style="margin-top:0.5rem">MBA para Emprendimiento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS STORIES -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Comunidad Internacional</p>
+      <h2 class="section-heading">Una Comunidad Global <em>Diversa y Fuerte</em></h2>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--mid);max-width:72ch;margin:1rem 0 0.5rem">El MBA de BYU cuenta con una comunidad internacional activa proveniente de decenas de países. Aunque el número de estudiantes latinoamericanos ha variado por año, el programa tiene una larga tradición de dar la bienvenida a candidatos de América Latina — y quienes han pasado por él comparten historias de crecimiento real. Aquí algunos ejemplos de esa trayectoria:</p>
+      <div class="three-col" style="margin-top:1.5rem">
+
+        <div class="story-card fade-in">
+          <p class="story-q">Venía de trabajar en Amazon en Costa Rica y quería dar un salto real en mi carrera. El MBA de BYU me dio la formación en Operaciones que buscaba — y me abrió la puerta a una pasantía en Tesla en Miami. Al graduarme iniciaré en Kelso Industries a tiempo completo. No es un camino que hubiera podido recorrer sin este programa.</p>
+          <div class="story-author">
+            <div class="story-init" style="background:var(--navy)">GM</div>
+            <div>
+              <div class="story-name">Graciela Monestel</div>
+              <div class="story-role">MBA 2do año · Costa Rica · Pasantía en Tesla, Miami FL</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card fade-in">
+          <p class="story-q">Tenía experiencia en Recursos Humanos trabajando en más de 13 países, pero quería llevar esa experiencia al siguiente nivel. El énfasis de BYU en RRHH estratégicos y mi pasantía en Citibank me dieron las herramientas para impactar organizaciones de forma mucho más profunda.</p>
+          <div class="story-author">
+            <div class="story-init" style="background:var(--blue)">GG</div>
+            <div>
+              <div class="story-name">Gianella Grandy</div>
+              <div class="story-role">MBA 1er año · Lima, Perú · Pasantía en Citibank</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card fade-in">
+          <p class="story-q">Con más de cinco años de experiencia en distintas industrias y una formación en Ingeniería Industrial, el MBA de BYU fue la combinación perfecta para especializarme en Operaciones. Mi pasantía en Oakland Construction fue una experiencia real con impacto directo desde el primer día.</p>
+          <div class="story-author">
+            <div class="story-init" style="background:var(--navy)">DP</div>
+            <div>
+              <div class="story-name">Diego Paez</div>
+              <div class="story-role">MBA 1er año · Perú / Argentina · Pasantía en Oakland Construction</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- BRENNA PORTER QUOTE -->
+      <div style="background:var(--sky);padding:2.5rem 3rem;margin-top:2.5rem;position:relative;border-left:5px solid var(--navy)">
+        <div style="font-size:4rem;color:var(--navy);opacity:0.15;position:absolute;top:1rem;left:1.5rem;font-family:'Merriweather',serif;line-height:1">"</div>
+        <p style="font-family:'Merriweather',serif;font-size:1.1rem;font-style:italic;color:var(--navy);line-height:1.8;max-width:75ch;position:relative;z-index:1">El programa de MBA de BYU Marriott cambiará tu vida. Te enseñará a trabajar con personas, a trabajar en equipo y te sacará de tu zona de confort todos los días. Te estirará de muchas maneras. No hay forma de salir de eso sin cambios.</p>
+        <p style="font-size:0.8rem;font-weight:700;color:var(--blue);letter-spacing:0.1em;text-transform:uppercase;margin-top:1.2rem">— Brenna Porter, MBA 2024</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINKS RESOURCES -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Recursos Oficiales</p>
+      <h2 class="section-heading">Todo en un Solo Lugar</h2>
+      <div class="link-grid" style="margin-top:2rem">
+        <a href="https://marriott.byu.edu/mba/about/overview/" target="_blank" class="link-item">
+          <div class="link-item-icon">🎓</div>
+          <div><span class="link-item-title">Página Oficial del MBA</span><span class="link-item-sub">Overview, currículo y rankings</span></div>
+        </a>
+        <a href="https://gradstudies.byu.edu/applying-to-byu-graduate-studies" target="_blank" class="link-item">
+          <div class="link-item-icon">📋</div>
+          <div><span class="link-item-title">Portal de Admisiones</span><span class="link-item-sub">Aplicar al programa</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/mba/career/careers/placement-profile/" target="_blank" class="link-item">
+          <div class="link-item-icon">📈</div>
+          <div><span class="link-item-title">Reporte de Empleo</span><span class="link-item-sub">Estadísticas y empresas</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/mba/about/class-profile/" target="_blank" class="link-item">
+          <div class="link-item-icon">👥</div>
+          <div><span class="link-item-title">Perfil de la Clase</span><span class="link-item-sub">Estadísticas del programa</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/information-sessions/" target="_blank" class="link-item">
+          <div class="link-item-icon">📅</div>
+          <div><span class="link-item-title">Sesiones Informativas</span><span class="link-item-sub">Eventos de reclutamiento</span></div>
+        </a>
+        <a href="https://marriott.byu.edu/cis/" target="_blank" class="link-item">
+          <div class="link-item-icon">🌎</div>
+          <div><span class="link-item-title">Beca Cardon (CIS)</span><span class="link-item-sub">Financiamiento para internacionales</span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <h3>¿Tienes preguntas? Estoy aquí para ayudarte.</h3>
+    <p>Soy estudiante actual del MBA de BYU y parte del equipo de reclutamiento. Escríbeme sin compromiso.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in Conectar en LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #inicio -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 2: CÓMO APLICAR
+═══════════════════════════════════════════ -->
+<div id="aplicar" class="page-section">
+
+  <div class="section-header-bar" style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Proceso de Admisión</p>
+      <h2 class="section-heading">Cómo Aplicar al MBA de BYU</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">En BYU Marriott el proceso de admisión es <strong style="color:var(--blue)">integral</strong> — tu perfil completo importa, no solo un número. Aquí te explicamos todo lo que necesitas saber como candidato internacional.</p>
+    </div>
+  </div>
+
+  <!-- TIMELINE VISUAL -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">De Aquí a BYU</p>
+      <h2 class="section-heading">¿Cuánto Tiempo Toma Todo el Proceso?</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:68ch;margin:0.8rem 0 2rem">Si aplicas hoy, así luce el camino realista hacia tu primer día en Provo:</p>
+      <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;min-width:500px" class="timeline-grid">
+        <div style="position:absolute;top:28px;left:8%;right:8%;height:3px;background:var(--border);z-index:0"></div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem;border:3px solid var(--blue)">📋</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Preparas papeles</div>
+          <div style="font-size:0.65rem;color:var(--muted)">4-8 semanas</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">📤</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Envías aplicación</div>
+          <div style="font-size:0.65rem;color:var(--muted)">1 día</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🤝</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Entrevista y admisión</div>
+          <div style="font-size:0.65rem;color:var(--muted)">3-6 semanas</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🌎</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">CIS (si aplica)</div>
+          <div style="font-size:0.65rem;color:var(--muted)">4-8 semanas</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🛂</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Visa</div>
+          <div style="font-size:0.65rem;color:var(--muted)">1-3 meses</div>
+        </div>
+        <div style="text-align:center;position:relative;z-index:2;padding:0 0.2rem">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.1rem">🎓</div>
+          <div style="font-size:0.7rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">¡Empiezas en BYU!</div>
+          <div style="font-size:0.65rem;color:var(--muted)">Agosto 2027</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:2.5rem" class="summary-grid">
+        <div class="highlight-box" style="margin:0">
+          <strong>⏱️ Tiempo total estimado</strong>
+          <p>De 4 a 6 meses desde que empiezas a preparar papeles hasta que cruzas la frontera. Por eso recomendamos empezar lo antes posible.</p>
+        </div>
+        <div class="highlight-box gold" style="margin:0">
+          <strong>📅 Fecha ideal para empezar</strong>
+          <p>Si quieres entrar en agosto 2027, lo óptimo es tener tu aplicación lista entre septiembre y diciembre de 2026.</p>
+        </div>
+        <div class="highlight-box" style="margin:0">
+          <strong>🌎 Candidatos internacionales</strong>
+          <p>El trámite de visa puede tomar más tiempo según tu país. Empieza el proceso tan pronto como recibas tu carta de admisión.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROCESO GENERAL -->
+  <div class="content-section">
+    <div class="content-inner">
+      <div class="two-col">
+        <div>
+          <p class="section-label">El Proceso Paso a Paso</p>
+          <h2 class="section-heading">Tu Camino hacia el MBA</h2>
+          <div class="steps-list" style="margin-top:1.5rem">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <h4>Prepara tus papeles</h4>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-top:0.4rem">
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Calificaciones universitarias (en inglés y con equivalencia a GPA)</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Examen GMAT o GRE (o solicitud de exención si calificas)</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Currículum actualizado</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> 2 a 4 cartas de recomendación</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Ensayo: "Carta de intención"</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Examen de inglés (TOEFL, IELTS o Duolingo, si aplica)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <h4>Envía tu aplicación</h4>
+                <p>A través del portal de BYU Graduate Studies. Las aplicaciones se revisan de forma continua — aplicar en la primera ronda da una ventaja real en becas y disponibilidad de lugares. <a href="https://gradstudies.byu.edu/applying-to-byu-graduate-studies" target="_blank">Ir al portal de aplicación →</a></p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <h4>Entrevista (por invitación)</h4>
+                <p>Los candidatos más competitivos son invitados a una entrevista, ya sea en campus en Provo o de forma virtual. Es tu oportunidad de mostrar quién eres más allá del expediente. La decisión llega aproximadamente dos semanas después.</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">04</div>
+              <div class="step-content">
+                <h4>Carta de admisión y becas</h4>
+                <p>Si eres admitido, recibirás tu carta de aceptación junto con la información de tu beca o apoyo económico. Las becas por mérito no requieren aplicación separada. Una vez admitido puedes solicitar la Beca Cardon (CIS).</p>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">05</div>
+              <div class="step-content">
+                <h4>Trámite de visa</h4>
+                <p>Según el tipo de apoyo financiero que recibas, inicias el proceso de visa F-1 o J-1. BYU te guía en cada paso a través de su Oficina de Estudiantes Internacionales. <a href="#" onclick="showSection('visas');return false">Ver comparación F-1 vs J-1 →</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="section-label">Criterios de Admisión</p>
+          <h2 class="section-heading">¿Qué evalúa BYU?</h2>
+          <p style="font-size:0.88rem;line-height:1.75;color:var(--mid);margin:0.8rem 0 1.2rem">BYU Marriott usa un proceso de admisión integral — evalúa tu perfil completo, no solo un número. Con una tasa de aceptación de aproximadamente <strong>45%</strong>, muchos candidatos son admitidos. Lo importante es que demuestres que tienes potencial y alineación con los valores de BYU. Aquí está lo que se evalúa:</p>
+
+          <ul class="req-list">
+            <li>
+              <div>
+                <strong>Promedio universitario (GPA)</strong><br>
+                <span style="font-weight:400">El GPA es el promedio general de tus calificaciones universitarias en la escala de Estados Unidos (0 a 4.0). El promedio de la clase de 2027 fue de 3.57. Si estudiaste fuera de EE. UU., es necesario que tú mismo tramites la traducción y equivalencia de tus calificaciones a través de un organismo autorizado por BYU (ver sección de requisitos internacionales abajo).</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>GMAT o GRE</strong><br>
+                <span style="font-weight:400">Son exámenes estandarizados que miden razonamiento verbal, matemático y analítico. El GMAT se califica en una escala de 205 a 805 puntos — un puntaje de 685 equivale aproximadamente al percentil 80 (mejor que el 80% de quienes lo presentan). El promedio del GMAT en la clase actual de BYU es de 685. Si el examen te genera dudas o crees que no calificarías, contáctame antes de tomarlo — existen casos en que BYU puede exentar el requisito.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Experiencia profesional</strong><br>
+                <span style="font-weight:400">Se recomienda un mínimo de 2 años de experiencia laboral a tiempo completo. Se valora la calidad y el nivel de responsabilidad, no solo los años de antigüedad.</span>
+                <div class="highlight-box" style="margin-top:0.7rem;padding:0.8rem 1rem">
+                  <strong style="font-size:0.82rem">Casos especiales:</strong>
+                  <ul style="margin-top:0.4rem;padding-left:1rem;font-size:0.82rem">
+                    <li style="margin-bottom:0.3rem">Si eres estudiante de <strong>BYU Pathway</strong>, trabajabas a tiempo completo mientras estudiabas y/o trabajaste antes de ingresar a la universidad, puedes solicitar que ese tiempo cuente como parte de los dos años de experiencia requerida.</li>
+                    <li>Si eres <strong>dueño de tu propio negocio</strong>, tu experiencia también puede tomarse en cuenta, aunque con algunas consideraciones adicionales. Contáctame para orientarte en cómo documentarlo.</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Ensayos personales</strong><br>
+                <span style="font-weight:400">Responderás preguntas como: ¿Por qué un MBA ahora? ¿Por qué BYU Marriott? ¿Cuáles son tus metas profesionales a largo plazo? Es tu espacio para contar tu historia.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Cartas de recomendación (2 o 3)</strong><br>
+                <span style="font-weight:400">Deben ser de personas que te conozcan profesionalmente y puedan hablar de tu capacidad de liderazgo, trabajo en equipo y potencial de crecimiento.</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Entrevista</strong><br>
+                <span style="font-weight:400">Solo candidatos seleccionados son invitados. Evalúa habilidades de comunicación, liderazgo y alineación con los valores de BYU.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="highlight-box gold" style="margin-top:1.5rem">
+            <strong>💡 ¿Puedo no presentar el GMAT o GRE?</strong>
+            <p>Sí, en casos excepcionales BYU puede exentar el examen. Para solicitar la exención, debes indicarlo dentro de tu aplicación. El comité la revisará junto con el resto de tu expediente. Contáctame antes de aplicar y te ayudo a evaluar si tu perfil es candidato a la exención.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CANDIDATOS INTERNACIONALES -->
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Candidatos Internacionales</p>
+      <h2 class="section-heading">Información para Candidatos Fuera de EE. UU.</h2>
+      <div class="two-col" style="margin-top:2rem">
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Requisitos de Inglés</h3>
+          <p style="font-size:0.85rem;line-height:1.75;color:var(--mid);margin-bottom:1rem">Si tu educación universitaria fue en español u otro idioma distinto al inglés, necesitas demostrar dominio del idioma con uno de estos exámenes:</p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1rem">
+            <div class="card" style="padding:1rem">
+              <div class="card-title">TOEFL iBT <span style="font-weight:400;color:var(--muted);font-size:0.78rem">— el más reconocido</span></div>
+              <div class="card-body">Mínimo recomendado: 85 puntos · Puntaje competitivo: 100+</div>
+            </div>
+            <div class="card" style="padding:1rem">
+              <div class="card-title">IELTS Academic</div>
+              <div class="card-body">Mínimo recomendado: 6.5 · Puntaje competitivo: 7.0+</div>
+            </div>
+            <div class="card" style="padding:1rem">
+              <div class="card-title">Duolingo English Test <span style="font-weight:400;color:var(--muted);font-size:0.78rem">— más accesible</span></div>
+              <div class="card-body">Mínimo: 105 puntos. Se presenta en línea, desde casa.</div>
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top:0.5rem">
+            <strong>ℹ️ ¿Cuándo puedo estar exento del examen de inglés?</strong>
+            <ul style="margin-top:0.4rem;padding-left:1.1rem">
+              <li>Si completaste tu título universitario en inglés</li>
+              <li>Si llevas 2 o más años viviendo y trabajando en un ambiente de habla inglesa</li>
+            </ul>
+          </div>
+
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.8rem">Lista de Requisitos para Candidatos Internacionales</h3>
+          <ul class="req-list">
+            <li>Calificaciones universitarias oficiales traducidas al inglés y con equivalencia a GPA, tramitadas a través de <strong>IERF</strong> o <strong>TEC</strong> (los dos organismos autorizados por BYU para este proceso)</li>
+            <li>Examen de inglés: TOEFL, IELTS o Duolingo (salvo que estés exento — ver condiciones arriba)</li>
+            <li>Evidencia de recursos financieros o solicitud de la Beca Cardon (CIS)</li>
+            <li style="background:#FEF9EC;border-left-color:var(--gold)">Después de ser admitido: contar con todos los requisitos necesarios para obtener una visa de estudiante (tipo F-1 o J-1), incluyendo pasaporte vigente. Obtener o renovar el pasaporte puede tomar tiempo, por lo que conviene iniciar este proceso con anticipación.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Fechas Límite — Ciclo 2027–2028</h3>
+          <p style="font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:1.2rem">BYU revisa aplicaciones de forma continua dentro de cada ronda. Una vez completa tu aplicación, puedes esperar respuesta en aproximadamente 3 semanas.</p>
+          <div style="display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.5rem">
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--gold);color:var(--navy);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">PRIORIDAD — BECAS</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Oct 2026</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Fecha límite para consideración prioritaria de becas. La mayoría de las becas se otorgan a candidatos de esta etapa.</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 1</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Dic 2026</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Mayor disponibilidad de lugares y tiempo suficiente para trámite de visa.</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 2 — INTERNACIONAL</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Ene 2027</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Fecha prioritaria para candidatos internacionales. Aún hay becas disponibles.</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--navy)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--navy);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 3 — LÍMITE INTERNACIONAL</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Mar 2027</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">Fecha final para candidatos internacionales. También es el límite para solicitar la Beca Cardon (CIS).</p>
+            </div>
+          </div>
+
+          <div class="highlight-box red">
+            <strong>⚠️ Importante para candidatos internacionales</strong>
+            <p>Los candidatos de fuera de EE. UU. <strong>deben aplicar antes del 1 de marzo de 2026</strong> como fecha límite. Para maximizar tus posibilidades de beca, aplica antes del 15 de octubre de 2025. Mientras más temprano apliques, mejor.</p>
+          </div>
+          <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/international-admissions/" target="_blank" class="card-link" style="display:block;margin-top:1rem">Ver página oficial de candidatos internacionales →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-strip">
+    <h3>¿Dudas sobre tu aplicación?</h3>
+    <p>Puedo revisar contigo tu perfil y orientarte sobre los pasos a seguir antes de que apliques formalmente.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #aplicar -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 3: BECAS Y FINANCIAMIENTO
+═══════════════════════════════════════════ -->
+<div id="becas" class="page-section">
+
+  <div class="section-header-bar" style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Ayuda Financiera</p>
+      <h2 class="section-heading">Becas, Financiamiento y Visas</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">El MBA de BYU ya es el más accesible de su categoría en EE. UU. Y además existen opciones de apoyo financiero diseñadas específicamente para candidatos internacionales.</p>
+    </div>
+  </div>
+
+  <!-- TIPOS DE AYUDA -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Panorama General</p>
+      <h2 class="section-heading">Tipos de Apoyo Financiero</h2>
+      <div class="three-col" style="margin-top:2rem">
+        <div class="card card-highlight">
+          <div class="card-icon">🏆</div>
+          <div class="card-title">Becas por Méritos Académicos</div>
+          <div class="card-body">Se otorgan automáticamente al momento de la admisión, basadas en el perfil académico y profesional del candidato. No requieren aplicación separada y reducen directamente el costo de la colegiatura. Disponibles para candidatos internacionales.</div>
+        </div>
+        <div class="card card-gold">
+          <div class="card-icon">🌎</div>
+          <div class="card-title">Beca Cardon (CIS)</div>
+          <div class="card-body">El patrocinio más completo disponible para estudiantes internacionales en BYU Marriott. Cubre colegiatura, libros, seguro médico y gastos de vida. Considerado el apoyo financiero de mayor prestigio de la Facultad.</div>
+          <a href="#cis-section" class="card-link">Ver todos los detalles ↓</a>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-icon">💼</div>
+          <div class="card-title">Pasantías (Prácticas Profesionales)</div>
+          <div class="card-body">Entre el primer y segundo año, los estudiantes realizan una pasantía remunerada que ayuda a cubrir los gastos del segundo año. Durante el segundo año también pueden trabajar dentro del campus de BYU.</div>
+        </div>
+      </div>
+
+      <!-- COST COMPARISON -->
+      <div style="margin-top:3rem">
+        <p class="section-label">Comparación de Costos — Colegiatura Total 2 Años</p>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.3rem;color:var(--navy);margin-bottom:0.5rem">BYU vs. Otras Escuelas Top de EE. UU.</h3>
+        <p style="font-size:0.85rem;color:var(--mid);margin-bottom:1.8rem">Menos deuda = Más libertad. La misma calidad, empleadores y red de contactos — a una fracción del precio.</p>
+        <div style="display:flex;flex-direction:column;gap:1rem">
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--navy)">BYU Marriott — Miembros de la Iglesia</span>
+              <span style="font-size:0.88rem;font-weight:700;color:var(--blue)">$32,000</span>
+            </div>
+            <div style="background:var(--border);height:30px;border-radius:2px;overflow:hidden">
+              <div style="width:23%;height:100%;background:var(--blue);display:flex;align-items:center;padding-left:0.7rem">
+                <span style="font-size:0.68rem;color:white;font-weight:700">#1 Valor</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--navy)">BYU Marriott — No Miembros</span>
+              <span style="font-size:0.88rem;font-weight:700;color:var(--blue)">$60,304</span>
+            </div>
+            <div style="background:var(--border);height:30px;border-radius:2px;overflow:hidden">
+              <div style="width:43%;height:100%;background:var(--lblue);display:flex;align-items:center;padding-left:0.7rem">
+                <span style="font-size:0.68rem;color:white;font-weight:700">57% menos que el promedio</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:0.3rem">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--mid)">Promedio de las mejores escuelas de EE. UU.</span>
+              <span style="font-size:0.82rem;color:var(--mid)">$141,059</span>
+            </div>
+            <div style="background:var(--border);height:30px;border-radius:2px;overflow:hidden">
+              <div style="width:100%;height:100%;background:#94a3b8;display:flex;align-items:center;padding-left:0.7rem">
+                <span style="font-size:0.68rem;color:white;font-weight:700">Harvard, Stanford, Wharton, MIT...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ANNUAL COST BREAKDOWN -->
+      <div style="margin-top:2.5rem">
+        <p class="section-label">Desglose de Costos Anuales</p>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;color:var(--navy);margin-bottom:1rem">¿Cuánto necesito por año? (estudiante sin dependientes)</h3>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1rem" class="cost-grid">
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$16,000</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Colegiatura</div>
+          </div>
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$15,988</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Vivienda y Comida</div>
+          </div>
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$3,584</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Transporte</div>
+          </div>
+          <div style="background:var(--offwh);padding:1rem;text-align:center;border-top:3px solid var(--navy)">
+            <div style="font-family:'Merriweather',serif;font-size:1.4rem;font-weight:700;color:var(--navy)">$2,864</div>
+            <div style="font-size:0.72rem;color:var(--mid);margin-top:0.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">Gastos Personales</div>
+          </div>
+        </div>
+        <div style="background:var(--navy);padding:1rem 1.5rem;display:flex;justify-content:space-between;align-items:center">
+          <span style="color:rgba(255,255,255,0.7);font-size:0.85rem;font-weight:600">TOTAL ESTIMADO POR AÑO</span>
+          <span style="font-family:'Merriweather',serif;font-size:1.8rem;font-weight:700;color:var(--gold)">$38,496</span>
+        </div>
+        <p style="font-size:0.73rem;color:var(--muted);margin-top:0.6rem">*Costos sin dependientes. El monto aumenta según estado civil y tamaño de familia. Fuente: BYU Marriott MBA Info Session 2025.</p>
+      </div>
+
+      <a href="https://marriott.byu.edu/mba/costs-financial-aid/financial-aid/" target="_blank" class="card-link" style="display:block;margin-top:1.5rem">Ver página oficial de ayuda financiera →</a>
+    </div>
+  </div>
+
+  <!-- CIS SECTION -->
+  <div id="cis-section" class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">El Patrocinio de Mayor Prestigio</p>
+      <h2 class="section-heading">🌎 Beca Cardon — Cardon International Sponsorship (CIS)</h2>
+
+      <div class="highlight-box gold" style="margin-bottom:2rem">
+        <strong>¿Qué es el CIS?</strong>
+        <p>El Wilford A. Cardon International Sponsorship fue fundado en 1986 por Wilford A. Cardon — ex misionero en Brasil y miembro del Consejo Asesor de BYU Marriott. Su propósito es que la situación económica no sea un obstáculo para que estudiantes internacionales accedan a una educación de calidad en BYU.</p>
+        <p style="margin-top:0.6rem">Funciona de manera similar al Fondo Perpetuo para la Educación: los participantes se comprometen a salir de Estados Unidos al graduarse —de regreso a su país de origen u otro país fuera de EE. UU.— para fortalecer y contribuir a sus comunidades y ayudar a edificar el reino de Dios en cada país, tribu, lengua y pueblo. Al cumplir ese compromiso, se les condona <strong>2/3 del préstamo</strong>, y el tercio restante puede pagarse en un plazo de hasta <strong>20 años sin intereses</strong>.</p>
+        <p style="margin-top:0.6rem">Desde su fundación, <strong>272 estudiantes de más de 50 países</strong> han participado, incluyendo <strong>25 de México, 23 de Argentina, 15 de Chile y 6 de Colombia</strong>, entre otros. Es considerado el apoyo financiero de mayor prestigio otorgado por la Facultad de Negocios Marriott.</p>
+      </div>
+
+      <div class="two-col">
+        <div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:1rem">¿Qué Cubre?</h3>
+          <ul class="req-list gold">
+            <li>Colegiatura completa del programa de MBA</li>
+            <li>Libros de texto y materiales académicos</li>
+            <li>Seguro médico durante el programa</li>
+            <li>Gastos de vida: renta (alquiler), pago de servicios, y un apoyo mensual para gastos personales como comida, higiene y transporte</li>
+          </ul>
+          <div class="highlight-box" style="margin-top:1.2rem">
+            <strong>⚠️ ¿Qué no cubre el CIS?</strong>
+            <p>El CIS cubre los semestres de otoño e invierno, pero <strong>no los meses de verano</strong> (primavera/verano). Durante ese período la mayoría de los estudiantes realizan su pasantía remunerada, lo que les permite cubrir sus gastos. Por ello, se requiere contar con al menos <strong>$8,000 USD de recursos propios</strong> al iniciar el programa — para cubrir gastos adicionales que el CIS no contempla y para el período de verano.</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--navy);margin-bottom:1rem">Requisitos de Elegibilidad</h3>
+          <ul class="req-list">
+            <li><strong>Ser admitido primero.</strong> El CIS se solicita después de recibir tu carta de admisión. No es posible solicitarlo antes.</li>
+            <li><strong>Ser miembro activo de La Iglesia de Jesucristo de los Santos de los Últimos Días.</strong> El CIS es un programa administrado por la Iglesia y está disponible exclusivamente para miembros en buen estado.</li>
+            <li>Comprometerse a <strong>salir de EE. UU.</strong> al graduarse — regresar al país de origen u otro país fuera de EE. UU.</li>
+            <li>Calificar para visa <strong>J-1</strong> — el CIS no es compatible con la visa F-1.</li>
+            <li>Cumplir con el <strong>Código de Honor de BYU</strong> — el mismo que se exige a todos los estudiantes de la universidad.</li>
+            <li>Contar con al menos <strong>$8,000 USD de recursos propios</strong> para gastos no cubiertos y el período de verano.</li>
+            <li>Preferencia para quienes hayan residido fuera de EE. UU. y Canadá al menos <strong>1 año antes de aplicar</strong>.</li>
+            <li>No estar cursando ni planear cursar un doctorado (PhD) o grado conjunto.</li>
+          </ul>
+          <div class="highlight-box red" style="margin-top:1rem">
+            <strong>🛂 Importante: el CIS requiere visa J-1</strong>
+            <p>La visa J-1 está diseñada para quienes regresan a su país al terminar sus estudios. No permite quedarse a trabajar en EE. UU. de manera permanente, pero el cónyuge con visa J-2 <strong>sí puede trabajar</strong> durante el programa. Consulta la sección de Visas para entender todas las implicaciones.</p>
+          </div>
+          <a href="https://marriott.byu.edu/cis/criteria/" target="_blank" class="card-link" style="display:block;margin-top:1rem">Ver criterios completos en marriott.byu.edu/cis →</a>
+        </div>
+      </div>
+
+      <!-- FAQ CIS -->
+      <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:2.5rem 0 1rem">Preguntas Frecuentes sobre el CIS</h3>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Cuándo aplico al CIS? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Primero debes ser admitido al programa de MBA. Una vez que tengas tu carta de admisión, entonces puedes iniciar la aplicación al CIS. No es posible solicitarlo antes.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Cuánto dinero recibo exactamente? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El monto varía según tu estado civil y el tamaño de tu familia. Para ver los niveles exactos de apoyo visita <a href="https://marriott.byu.edu/cis/levels-of-support/" target="_blank">marriott.byu.edu/cis/levels-of-support</a>. Contáctame si quieres que te ayude a interpretar esos números según tu situación.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Puedo traer a mi familia? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Sí. Tu cónyuge puede acompañarte con visa J-2 y tiene derecho a solicitar un permiso de trabajo en EE. UU. Tus hijos menores también pueden acompañarte. El monto del apoyo del CIS toma en cuenta el tamaño de tu familia.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Qué hago durante el verano si el CIS no cubre esos meses? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Durante el verano —entre el primer y segundo año— la mayoría de los estudiantes realizan una pasantía (práctica profesional) remunerada. Esos ingresos, junto con los $8,000 USD de recursos propios requeridos al inicio, permiten cubrir los gastos de ese período. El seguro médico del CIS sí continúa vigente durante el verano.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Con quién me comunico en BYU para saber más sobre el CIS? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El director del programa CIS es <strong>Kent Griffith</strong>. Puedes contactarlo en <strong>kent.griffith@byu.edu</strong> o al (801) 422-8165. También puedes visitar <a href="https://marriott.byu.edu/cis/contact/" target="_blank">marriott.byu.edu/cis/contact</a>. Si prefieres, contáctame primero y con gusto te oriento antes de que hables directamente con ellos.</div>
+        </div>
+      </div>
+
+      <!-- CIS TIMELINE -->
+      <div style="margin-top:2.5rem">
+        <p class="section-label">¿Cuándo sabes si calificas?</p>
+        <h3 style="font-family:'Merriweather',serif;font-size:1.1rem;color:var(--navy);margin-bottom:1.5rem">Proceso y Tiempos del CIS</h3>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;overflow-x:auto" class="cis-timeline-grid">
+          <div style="position:absolute;top:28px;left:10%;right:10%;height:3px;background:var(--border);z-index:0"></div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">📋</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Aplicas al MBA</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Portal BYU</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">✉️</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Carta de Admisión</div>
+            <div style="font-size:0.68rem;color:var(--muted)">~3-4 semanas</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">🌎</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Aplicas al CIS</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Después de admisión</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">🛂</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Visa J-1</div>
+            <div style="font-size:0.68rem;color:var(--muted)">1-3 meses</div>
+          </div>
+          <div style="text-align:center;position:relative;z-index:2;padding:0 0.3rem">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--blue);color:var(--white);display:flex;align-items:center;justify-content:center;margin:0 auto 0.7rem;font-size:1.2rem">🎓</div>
+            <div style="font-size:0.72rem;font-weight:700;color:var(--navy);margin-bottom:0.2rem">Inicias el MBA</div>
+            <div style="font-size:0.68rem;color:var(--muted)">Agosto/Sept 2026</div>
+          </div>
+        </div>
+        <div class="highlight-box gold" style="margin-top:1.8rem">
+          <strong>⏱️ Recomendación de tiempo</strong>
+          <p>Para entrar en el otoño de 2027, lo ideal es aplicar al MBA antes de diciembre de 2026. Mientras antes apliques, más tiempo tendrás para el proceso del CIS y el trámite de visa — especialmente importante si vives lejos de un consulado americano.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISA SECTION MOVED -->
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Visas de Estudiante</p>
+      <h2 class="section-heading">¿Visa F-1 o J-1?</h2>
+      <p style="font-size:0.92rem;line-height:1.8;color:var(--mid);max-width:65ch;margin:0.8rem 0 1.5rem">El tipo de visa que necesitas depende de cómo financiarás tu programa. Esta es una de las decisiones más importantes del proceso — la comparación completa está en su propia sección.</p>
+      <a href="#" onclick="showSection('visas');return false" class="btn-gold" style="display:inline-block">Ver comparación F-1 vs J-1 →</a>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-strip">
+    <h3>¿Tienes dudas sobre la Beca Cardon o las visas?</h3>
+    <p>Te ayudo a entender qué opción se adapta mejor a tu situación personal y familiar.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #becas -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 4: VISAS DE ESTUDIANTE
+═══════════════════════════════════════════ -->
+<div id="visas" class="page-section">
+
+  <div class="section-header-bar" style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Visas de Estudiante</p>
+      <h2 class="section-heading">¿Qué visa necesito para estudiar en BYU?</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">Una visa es el permiso oficial que otorga el gobierno de Estados Unidos para entrar y residir en el país con un propósito específico. Para estudiar en BYU existen dos tipos: la <strong style="color:var(--gold)">F-1</strong> y la <strong style="color:var(--gold)">J-1</strong>. Ambas te permiten estudiar, pero tienen reglas muy diferentes sobre trabajo, familia y lo que pasa al graduarte. Elegir la correcta desde el inicio es importante — y depende principalmente de cómo vas a financiar tu programa.</p>
+    </div>
+  </div>
+
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Antes de la tabla</p>
+      <h3 style="font-family:'Merriweather',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1rem">¿Por qué importa elegir desde el principio?</h3>
+      <div class="two-col" style="gap:2rem">
+        <div class="card card-highlight" style="border-top-color:var(--blue)">
+          <div class="card-title" style="font-size:1rem">Elige <span class="tag-f">F-1</span> si...</div>
+          <ul style="list-style:none;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.5rem">
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700">→</span> Financias el MBA con recursos propios o beca por mérito</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700">→</span> Quieres explorar trabajar en EE. UU. al graduarte</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700">→</span> Tu cónyuge no necesita trabajar mientras estudias</li>
+          </ul>
+        </div>
+        <div class="card card-gold">
+          <div class="card-title" style="font-size:1rem">Elige <span class="tag-j">J-1</span> si...</div>
+          <ul style="list-style:none;margin-top:0.8rem;display:flex;flex-direction:column;gap:0.5rem">
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--gold);font-weight:700">→</span> Solicitas la Beca Cardon (CIS) — la J-1 es obligatoria</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--gold);font-weight:700">→</span> Planeas regresar a tu país al graduarte</li>
+            <li style="display:flex;gap:0.5rem;font-size:0.84rem;color:var(--mid)"><span style="color:var(--gold);font-weight:700">→</span> Tu cónyuge necesita trabajar mientras estudias</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="content-inner">
+      <p class="section-label">Comparación Detallada</p>
+      <h2 class="section-heading">Visa F-1 vs. Visa J-1</h2>
+      <p style="font-size:0.88rem;color:var(--mid);line-height:1.75;max-width:72ch;margin:0.8rem 0 2rem">Aquí están todas las diferencias relevantes para tomar la mejor decisión:</p>
+
+      <div class="table-scroll" style="overflow-x:auto">
+        <table class="visa-table">
+          <thead>
+            <tr>
+              <th>Tema</th>
+              <th><span class="tag-f">F-1</span>&nbsp; Visa de Estudiante</th>
+              <th><span class="tag-j">J-1</span>&nbsp; Visa de Intercambio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>¿Para quién aplica?</td>
+              <td>Estudiantes que se financian con recursos propios, becas por mérito de BYU, o financiamiento privado.</td>
+              <td>Requerida para participantes del programa <strong>Beca Cardon (CIS)</strong> y otros programas de intercambio.</td>
+            </tr>
+            <tr>
+              <td>¿Puedo trabajar mientras estudio?</td>
+              <td>Con visa F-1 puedes trabajar <strong>dentro del campus</strong> de BYU sin restricciones. También es posible trabajar <strong>fuera del campus con autorización previa</strong> — por ejemplo, mediante el programa CPT (Curricular Practical Training), que permite pasantías y trabajo práctico relacionado con tu área de estudio.</td>
+              <td>Permite trabajar dentro y, en algunos casos, fuera del campus durante el programa, con autorización previa.</td>
+            </tr>
+            <tr>
+              <td>¿Puedo trabajar al graduarme?</td>
+              <td>Sí — tienes derecho a un <strong>permiso de trabajo temporal</strong> de <strong>12 meses</strong> en EE. UU. para trabajar en tu área de estudio. Si cursaste la especialización en ciencia y tecnología (STEM), ese permiso se extiende hasta <strong>36 meses en total</strong>.</td>
+              <td>Sí — puedes trabajar hasta <strong>18 meses</strong> después de graduarte en EE. UU., en un puesto relacionado con tu programa de estudios.</td>
+            </tr>
+            <tr>
+              <td>¿Puede trabajar mi cónyuge?</td>
+              <td>❌ El cónyuge con visa dependiente (F-2) <strong>no puede trabajar</strong> legalmente en EE. UU.</td>
+              <td>✅ El cónyuge con visa dependiente (J-2) <strong>sí puede solicitar un permiso de trabajo</strong> en EE. UU.</td>
+            </tr>
+            <tr>
+              <td>¿Puedo quedarme a trabajar en EE. UU. después?</td>
+              <td>Es posible — un empleador puede patrocinarte para una <strong>visa de trabajo de largo plazo</strong> (el tipo más común para profesionales en EE. UU.) después de tu período de trabajo temporal.</td>
+              <td>Generalmente <strong>no</strong>. El J-1 está diseñado para quienes regresan a su país al terminar. Cambiar a una visa de trabajo permanente es muy difícil o imposible con esta visa.</td>
+            </tr>
+            <tr>
+              <td>¿Tengo que regresar a mi país?</td>
+              <td>No hay obligación formal de regresar.</td>
+              <td>Sí. La visa J-1 del CIS lleva el compromiso de <strong>regresar al país de origen</strong> al graduarse. Además, en algunos casos aplica una regla de 2 años de residencia en el país antes de poder cambiar a otro tipo de visa.</td>
+            </tr>
+            <tr>
+              <td>¿Es compatible con la Beca Cardon (CIS)?</td>
+              <td>❌ No. El CIS <strong>requiere visa J-1</strong> obligatoriamente.</td>
+              <td>✅ Sí. La Beca Cardon solo es posible con visa J-1.</td>
+            </tr>
+            <tr>
+              <td>Documento que emite BYU</td>
+              <td>Formulario <strong>I-20</strong> — lo presentas en el consulado americano de tu país.</td>
+              <td>Formulario <strong>DS-2019</strong> — lo presentas en el consulado americano de tu país.</td>
+            </tr>
+            <tr>
+              <td>Mejor opción si...</td>
+              <td>Quieres explorar la posibilidad de trabajar en EE. UU. después de graduarte, o si tu familia necesita también trabajar.</td>
+              <td>Planeas <strong>regresar a tu país</strong> al terminar el MBA. Ideal si recibes la Beca Cardon. También es mejor si tu cónyuge necesita trabajar mientras estudias.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-box" style="margin-top:2rem">
+        <strong>ℹ️ Nota importante</strong>
+        <p>Esta comparación es informativa y no representa asesoría legal migratoria. Cada caso es diferente. BYU cuenta con una Oficina de Estudiantes Internacionales (ISSC) que te orienta en el proceso una vez que eres admitido. Para asesoría específica sobre tu situación, consulta a un especialista en inmigración.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section bg-light">
+    <div class="content-inner">
+      <p class="section-label">Preguntas Frecuentes</p>
+      <h2 class="section-heading">Dudas Comunes sobre las Visas</h2>
+      <div class="accordion" style="margin-top:1.5rem">
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Cuándo necesito tramitar mi visa? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El trámite de visa comienza <strong>después de recibir tu carta de admisión</strong>. BYU emite el formulario correspondiente (I-20 o DS-2019) y con ese documento acudes al consulado americano en tu país. Los tiempos de espera varían — en algunos países la cita consular puede tardar semanas o meses, por lo que conviene iniciar el proceso lo antes posible.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Qué pasa si tengo visa F-1 pero luego quiero la Beca Cardon? <span class="arrow">▼</span></button>
+          <div class="accordion-body">La Beca Cardon (CIS) <strong>requiere visa J-1</strong> sin excepción. No puedes recibirla si entras con F-1. Por eso es importante decidir desde el inicio si planeas solicitar el CIS, para tramitar directamente la J-1.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Puedo traer a mis hijos con cualquiera de las dos visas? <span class="arrow">▼</span></button>
+          <div class="accordion-body">Sí. Con ambas visas tus hijos pueden acompañarte como dependientes (F-2 o J-2). Los niños en edad escolar pueden asistir a escuelas públicas en Utah sin costo adicional.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Necesito pasaporte para aplicar al MBA? <span class="arrow">▼</span></button>
+          <div class="accordion-body">No — el pasaporte no es requisito durante el proceso de admisión. Sin embargo, sí lo necesitarás una vez que seas admitido para tramitar tu visa. Como obtener o renovar un pasaporte puede tomar tiempo (semanas o meses según el país), es recomendable iniciarlo con anticipación.</div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">¿Qué es el OPT y cómo funciona para la F-1? <span class="arrow">▼</span></button>
+          <div class="accordion-body">El OPT (Optional Practical Training) es un período de hasta <strong>12 meses</strong> en que puedes trabajar legalmente en EE. UU. en tu área de estudio, una vez que te gradúas con visa F-1. Si cursaste la especialización STEM, puedes extenderlo por 24 meses adicionales, para un total de hasta 3 años trabajando en EE. UU. después del MBA.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-strip">
+    <h3>¿Dudas sobre qué visa te conviene más?</h3>
+    <p>Cada situación es diferente. Contáctame y te ayudo a entender cuál es la mejor opción para ti y tu familia.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #visas -->
+
+
+<!-- ═══════════════════════════════════════════
+     SECCIÓN 5: SOBRE MÍ
+═══════════════════════════════════════════ -->
+<div id="sobre" class="page-section">
+
+  <div class="section-header-bar" style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
+    <div class="content-inner">
+      <p class="section-label">Quién Soy</p>
+      <h2 class="section-heading">Sobre Mí</h2>
+      <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">Soy estudiante de MBA en BYU Marriott y parte del equipo de BYU Ambassadors. Estoy aquí para ayudarte a navegar el proceso — sin complicaciones y en tu idioma.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <div class="content-inner">
+      <div class="two-col" style="align-items:center;gap:4rem">
+
+        <!-- FOTO -->
+        <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem">
+          <div style="width:220px;height:220px;border-radius:50%;background:var(--sky);border:4px solid var(--navy);overflow:hidden;display:flex;align-items:center;justify-content:center">
+            <img src="data:image/jpeg;base64,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" style="width:100%;height:100%;object-fit:cover;border-radius:50%" alt="Limhi Durán">
+          </div>
+          <div style="text-align:center">
+            <div style="font-family:'Merriweather',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">Limhi Durán</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:0.35rem">MBA Candidate · BYU Marriott 2026</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:0.15rem">BYU MBA Ambassador · Originario de México</div>
+            <div style="display:flex;gap:0.75rem;justify-content:center;margin-top:1rem;flex-wrap:wrap">
+              <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline" style="padding:0.5rem 1rem;font-size:0.75rem">in LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- HISTORIA -->
+        <div>
+          <p class="section-label">Mi Historia</p>
+          <h2 class="section-heading">Una Historia de <em>Propósito</em></h2>
+          <div class="section-body">
+            <p>Mi nombre es Limhi Durán, soy originario de México y gracias a la Beca Cardon (CIS) mi familia y yo pudimos venir a Provo para estudiar el MBA. Fue una bendición enorme — pero no llegó sola. El proceso de aplicación fue, en ocasiones, muy solitario. Muchas preguntas sin respuesta, mucha incertidumbre, y pocos recursos en español que realmente explicaran cómo funciona todo esto.</p>
+            <p>Ahora, como parte del equipo de BYU Ambassadors, quiero ser ese recurso que yo hubiera querido tener. Mi meta es ayudar a más personas a acceder a una educación de calidad global que les permita mejorar sus vidas y las de sus comunidades.</p>
+            <p>El MBA es un programa transformador. Gracias a él he crecido espiritual, profesional y mentalmente. La vida de mi familia ha sido grandemente bendecida al ser parte de esta comunidad. Si te interesa prepararte para aplicar, no tienes que hacerlo solo — puedes mandarme cualquier pregunta que tengas y con gusto intentaré ayudarte.</p>
+          </div>
+          <div class="highlight-box gold" style="margin-top:1.5rem">
+            <strong>🤝 Estoy aquí para ayudarte</strong>
+            <p>Puedo orientarte en el proceso de admisión, explicarte el CIS con más detalle, o simplemente responder las preguntas que nadie más te ha podido contestar. Sin compromiso y sin costo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-strip">
+    <h3>¿Listo para dar el siguiente paso?</h3>
+    <p>Escríbeme directamente — con gusto te acompaño en este proceso.</p>
+    <div class="contact-strip-btns">
+      <a href="https://forms.gle/Yxn7F2z9EzWZRwXB9" target="_blank" class="btn-contact btn-contact-gold">📋 Llenar Formulario</a>
+      <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" class="btn-contact btn-contact-outline">📅 Agendar una Cita</a>
+      <a href="https://www.linkedin.com/in/limhiduran?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="btn-contact btn-contact-outline">in LinkedIn</a>
+      <a href="https://wa.me/+13852255018" target="_blank" class="btn-contact btn-contact-outline">💬 WhatsApp</a>
+      <a href="mailto:limhi6@byu.edu" class="btn-contact btn-contact-outline">✉️ Correo</a>
+    </div>
+  </div>
+
+</div><!-- fin #sobre -->
+
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>Página creada por un estudiante actual del MBA de BYU Marriott · Esta es una iniciativa de reclutamiento estudiantil no oficial.</p>
+  <p style="margin-top:0.4rem">Información oficial en <a href="https://marriott.byu.edu/mba" target="_blank">marriott.byu.edu/mba</a> · Beca CIS: <a href="https://marriott.byu.edu/cis" target="_blank">marriott.byu.edu/cis</a></p>
+</footer>
+
+<script>
+function showSection(id) {
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const tabs = document.querySelectorAll('.nav-tab');
+  const map = {inicio:0, aplicar:1, becas:2, visas:3, sobre:4};
+  tabs[map[id]].classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function toggleAccordion(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('open'));
+  if (!isOpen) { body.classList.add('open'); btn.classList.add('open'); }
+}
+
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold: 0.1});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
