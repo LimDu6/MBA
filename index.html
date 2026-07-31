@@ -158,6 +158,14 @@ nav{background:var(--white);border-bottom:3px solid var(--navy);position:sticky;
 .link-item-title{font-size:0.82rem;font-weight:700;display:block}
 .link-item-sub{font-size:0.72rem;color:var(--muted);margin-top:0.1rem}
 
+/* ─── QUICK NAV (jump-to-section chips) ─── */
+.jump-target{scroll-margin-top:96px}
+.quick-nav{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.4rem}
+.quick-nav-item{display:flex;align-items:center;gap:0.55rem;background:var(--white);border:1px solid var(--border);padding:0.55rem 1rem;font-size:0.78rem;font-weight:700;color:var(--navy);text-decoration:none;transition:all 0.2s}
+.quick-nav-item:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,46,93,0.1)}
+.quick-nav-icon{font-size:0.95rem;line-height:1}
+@media (max-width:700px){.quick-nav{gap:0.45rem}.quick-nav-item{padding:0.5rem 0.8rem;font-size:0.72rem}}
+
 /* ─── CONTACT STRIP ─── */
 .contact-strip{background:var(--blue);padding:3rem 2rem;text-align:center}
 .contact-strip h3{font-family:'Merriweather',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.5rem}
@@ -297,6 +305,12 @@ html[lang="en"] .lang-es{display:none!important}
   .nav-contact{display:none!important}
   .lang-toggle-btn{font-size:0.65rem;padding:0.28rem 0.65rem}
 }
+
+/* ─── BACK TO TOP ─── */
+.back-to-top{position:fixed;right:1.5rem;bottom:1.5rem;width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--white);border:none;font-size:1.2rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,46,93,0.25);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity 0.25s,transform 0.25s,background 0.2s;z-index:99}
+.back-to-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+.back-to-top:hover{background:var(--blue)}
+@media(max-width:768px){.back-to-top{right:1rem;bottom:1rem;width:42px;height:42px;font-size:1.1rem}}
 </style>
 </head>
 <body>
@@ -1144,11 +1158,18 @@ html[lang="en"] .lang-es{display:none!important}
       <p class="section-label">Proceso de Admisión</p>
       <h2 class="section-heading">Cómo Aplicar al MBA de BYU</h2>
       <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">En BYU Marriott el proceso de admisión es <strong style="color:var(--blue)">integral</strong> — tu perfil completo importa, no solo un número. Aquí te explicamos todo lo que necesitas saber como candidato internacional.</p>
+      <nav class="quick-nav" aria-label="Navegación rápida">
+        <a href="#es-timeline" class="quick-nav-item"><span class="quick-nav-icon">🗓️</span> Cronograma</a>
+        <a href="#es-process" class="quick-nav-item"><span class="quick-nav-icon">✅</span> Proceso y Criterios</a>
+        <a href="#es-international" class="quick-nav-item"><span class="quick-nav-icon">🌎</span> Candidatos Internacionales</a>
+        <a href="#es-documents" class="quick-nav-item"><span class="quick-nav-icon">📄</span> Résumé y Carta</a>
+        <a href="#es-examprep" class="quick-nav-item"><span class="quick-nav-icon">📊</span> Prep. de Exámenes</a>
+      </nav>
     </div>
   </div>
 
   <!-- TIMELINE VISUAL -->
-  <div class="content-section bg-light">
+  <div class="content-section bg-light jump-target" id="es-timeline">
     <div class="content-inner">
       <p class="section-label">De Aquí a BYU</p>
       <h2 class="section-heading">¿Cuánto Tiempo Toma Todo el Proceso?</h2>
@@ -1204,7 +1225,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- PROCESO GENERAL -->
-  <div class="content-section">
+  <div class="content-section jump-target" id="es-process">
     <div class="content-inner">
       <div class="two-col">
         <div>
@@ -1219,7 +1240,7 @@ html[lang="en"] .lang-es{display:none!important}
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Calificaciones universitarias (en inglés y con equivalencia a GPA)</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Examen GMAT o GRE (o solicitud de exención si calificas)</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Currículum actualizado</li>
-                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> 2 a 4 cartas de recomendación</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Dos cartas de recomendación</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Ensayo: "Carta de intención"</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Examen de inglés (TOEFL, IELTS o Duolingo, si aplica)</li>
                 </ul>
@@ -1264,19 +1285,19 @@ html[lang="en"] .lang-es{display:none!important}
             <li>
               <div>
                 <strong>Promedio universitario (GPA)</strong><br>
-                <span style="font-weight:400">El GPA es el promedio general de tus calificaciones universitarias en la escala de Estados Unidos (0 a 4.0). El promedio de la clase de 2027 fue de 3.57. Si estudiaste fuera de EE. UU., es necesario que tú mismo tramites la traducción y equivalencia de tus calificaciones a través de un organismo autorizado por BYU (ver sección de requisitos internacionales abajo).</span>
+                <span style="font-weight:400">El GPA es el promedio general de tus calificaciones universitarias en la escala de Estados Unidos (0 a 4.0). BYU típicamente busca un GPA de <strong>3.5 o superior</strong>, aunque los candidatos admitidos exitosamente van desde 3.0 hasta 4.0 — también se toma en cuenta el rigor de tu programa universitario. Si estudiaste fuera de EE. UU., es necesario que tú mismo tramites la traducción y equivalencia de tus calificaciones a través de un organismo autorizado por BYU (ver sección de requisitos internacionales abajo).</span>
               </div>
             </li>
             <li>
               <div>
-                <strong>GMAT o GRE</strong><br>
-                <span style="font-weight:400">Son exámenes estandarizados que miden razonamiento verbal, matemático y analítico. El GMAT se califica en una escala de 205 a 805 puntos — un puntaje de 685 equivale aproximadamente al percentil 80 (mejor que el 80% de quienes lo presentan). El promedio del GMAT en la clase actual de BYU es de 685. Si el examen te genera dudas o crees que no calificarías, contáctame antes de tomarlo — existen casos en que BYU puede exentar el requisito.</span>
+                <strong>GMAT, GRE, LSAT o MCAT</strong><br>
+                <span style="font-weight:400">Se requiere un puntaje de examen estandarizado (con pocas excepciones). El <strong>GMAT Focus Edition</strong> se califica en una escala de 205 a 805 puntos — el promedio actual en BYU es de <strong>615</strong> (en la escala anterior a 2024 el promedio era 680), con un rango de candidatos exitosos de 555 a 775. El <strong>GRE</strong> también es aceptado, con un promedio del percentil 85 y un rango de candidatos exitosos entre el percentil 60 y el 99. LSAT y MCAT también son aceptados. Si el examen te genera dudas o crees que no calificarías, contáctame antes de tomarlo — existen casos en que BYU puede exentar el requisito.</span>
               </div>
             </li>
             <li>
               <div>
                 <strong>Experiencia profesional</strong><br>
-                <span style="font-weight:400">Se recomienda un mínimo de 2 años de experiencia laboral a tiempo completo. Se valora la calidad y el nivel de responsabilidad, no solo los años de antigüedad.</span>
+                <span style="font-weight:400">Se prefiere un mínimo de 2 años de experiencia laboral a tiempo completo después de tu título universitario — este tiempo se calcula al momento de iniciar el programa, no al momento de aplicar. El estudiante admitido promedio tiene 4 años de experiencia. Se valora la calidad y el nivel de responsabilidad, no solo los años de antigüedad.</span>
                 <div class="highlight-box" style="margin-top:0.7rem;padding:0.8rem 1rem">
                   <strong style="font-size:0.82rem">Casos especiales:</strong>
                   <ul style="margin-top:0.4rem;padding-left:1rem;font-size:0.82rem">
@@ -1294,8 +1315,8 @@ html[lang="en"] .lang-es{display:none!important}
             </li>
             <li>
               <div>
-                <strong>Cartas de recomendación (2 o 3)</strong><br>
-                <span style="font-weight:400">Deben ser de personas que te conozcan profesionalmente y puedan hablar de tu capacidad de liderazgo, trabajo en equipo y potencial de crecimiento.</span>
+                <strong>Cartas de recomendación (2)</strong><br>
+                <span style="font-weight:400">BYU pide dos cartas de recomendación profesionales. Se recomienda que provengan de supervisores, colegas o personas que reporten contigo — no de profesores ni de líderes religiosos.</span>
               </div>
             </li>
             <li>
@@ -1316,7 +1337,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- CANDIDATOS INTERNACIONALES -->
-  <div class="content-section bg-light">
+  <div class="content-section bg-light jump-target" id="es-international">
     <div class="content-inner">
       <p class="section-label">Candidatos Internacionales</p>
       <h2 class="section-heading">Información para Candidatos Fuera de EE. UU.</h2>
@@ -1359,42 +1380,42 @@ html[lang="en"] .lang-es{display:none!important}
         </div>
 
         <div>
-          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Fechas Límite — Ciclo 2027–2028</h3>
-          <p style="font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:1.2rem">BYU revisa aplicaciones de forma continua dentro de cada ronda. Una vez completa tu aplicación, puedes esperar respuesta en aproximadamente 3 semanas.</p>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Fechas Límite — Ingreso Otoño 2027</h3>
+          <p style="font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:1.2rem">Las aplicaciones abren el <strong>15 de julio de 2026</strong>. BYU acepta aplicaciones de forma continua dentro de cada ronda y, una vez que pasa la fecha límite de la ronda, todas las aplicaciones se revisan juntas — así que las invitaciones a entrevista y las decisiones de admisión salen de forma continua, no en una sola fecha.</p>
           <div style="display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.5rem">
             <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
-                <span style="background:var(--gold);color:var(--navy);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">PRIORIDAD — BECAS</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Oct 2026</span>
+                <span style="background:var(--gold);color:var(--navy);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 1 — PRIORIDAD DE BECAS</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">2 Oct 2026</span>
               </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Fecha límite para consideración prioritaria de becas. La mayoría de las becas se otorgan a candidatos de esta etapa.</p>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MDT. Fecha límite para consideración prioritaria de becas. La mayoría de las becas se otorgan a candidatos de esta etapa.</p>
             </div>
             <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
-                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 1</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Dic 2026</span>
+                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 2 — PRIORIDAD INTERNACIONAL</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">11 Dic 2026</span>
               </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Mayor disponibilidad de lugares y tiempo suficiente para trámite de visa.</p>
-            </div>
-            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
-                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 2 — INTERNACIONAL</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Ene 2027</span>
-              </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Fecha prioritaria para candidatos internacionales. Aún hay becas disponibles.</p>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MST. Fecha prioritaria para candidatos internacionales. Aún hay becas disponibles y tiempo suficiente para el trámite de visa.</p>
             </div>
             <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--navy)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
                 <span style="background:var(--navy);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 3 — LÍMITE INTERNACIONAL</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Mar 2027</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">19 Feb 2027</span>
               </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Fecha final para candidatos internacionales. También es el límite para solicitar la Beca Cardon (CIS).</p>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MST. Fecha final para candidatos internacionales. También es el límite para tener toda tu aplicación lista si quieres ser considerado para la Beca Cardon (CIS).</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--muted)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--muted);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">RONDA 4 — LÍMITE DOMÉSTICO</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">30 Abr 2027</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MDT. Última ronda del ciclo — <strong>solo para candidatos domésticos</strong> (ciudadanos o residentes de EE. UU.), ya que no deja tiempo suficiente para tramitar una visa de estudiante.</p>
             </div>
           </div>
 
           <div class="highlight-box red">
             <strong>⚠️ Importante para candidatos internacionales</strong>
-            <p>Los candidatos de fuera de EE. UU. <strong>deben aplicar antes del 1 de marzo de 2026</strong> como fecha límite. Para maximizar tus posibilidades de beca, aplica antes del 15 de octubre de 2025. Mientras más temprano apliques, mejor.</p>
+            <p>Los candidatos de fuera de EE. UU. <strong>deben aplicar antes del 19 de febrero de 2027</strong> (Ronda 3), ya que la Ronda 4 es exclusiva para candidatos domésticos. Para maximizar tus posibilidades de beca, aplica antes del 2 de octubre de 2026 (Ronda 1). Mientras más temprano apliques, mejor.</p>
           </div>
           <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/international-admissions/" target="_blank" class="card-link" style="display:block;margin-top:1rem">Ver página oficial de candidatos internacionales →</a>
         </div>
@@ -1403,7 +1424,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- ── RESUME Y STATEMENT OF INTENT ── -->
-  <div class="content-section bg-light">
+  <div class="content-section bg-light jump-target" id="es-documents">
     <div class="content-inner">
 
       <p class="section-label">Documentos de Aplicación</p>
@@ -1515,49 +1536,66 @@ html[lang="en"] .lang-es{display:none!important}
         <div>
           <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:1rem">
             <div style="width:36px;height:36px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">✍️</div>
-            <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin:0">La Carta de Intención (Statement of Intent)</h3>
+            <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin:0">La Carta de Intención <span style="font-weight:400;color:var(--muted);font-size:0.85rem">(basada en los criterios oficiales de BYU)</span></h3>
           </div>
-          <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;margin-bottom:1.2rem">Es el ensayo personal que acompaña tu aplicación. BYU Marriott te pide que respondas preguntas como: ¿Por qué un MBA ahora? ¿Por qué BYU? ¿Cuáles son tus metas? Es tu oportunidad de humanizar tu expediente y mostrar quién eres más allá de los números.</p>
+          <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;margin-bottom:1.2rem">Es un ensayo de <strong>1 a 2 páginas</strong> que el comité de BYU lee con atención. No se trata de repetir tu résumé — es tu oportunidad de humanizar tu perfil. BYU especifica exactamente lo que quiere que abordes.</p>
 
-          <!-- ESTRUCTURA -->
+          <!-- LOS 6 PUNTOS OFICIALES DE BYU -->
           <div style="background:var(--white);border:1px solid var(--border);padding:1.4rem;margin-bottom:1.2rem">
-            <p style="font-size:0.8rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.9rem">Estructura recomendada (5 partes)</p>
+            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.9rem">
+              <p style="font-size:0.8rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.12em;margin:0">Los 6 puntos que BYU pide abordar</p>
+              <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/admission-criteria-2/" target="_blank" style="font-size:0.7rem;color:var(--blue);text-decoration:none;font-weight:600;flex-shrink:0">ver fuente oficial →</a>
+            </div>
             <div class="steps-list" style="gap:0">
-              <div class="step-item" style="padding:0.9rem 0">
-                <div class="step-num" style="width:32px;height:32px;font-size:0.78rem;flex-shrink:0">1</div>
+
+              <div class="step-item" style="padding:0.85rem 0">
+                <div class="step-num" style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0">1</div>
                 <div class="step-content">
-                  <h4>Apertura memorable</h4>
-                  <p>No empieces con "Siempre he querido hacer un MBA." Empieza con una historia, un momento específico, una decisión que cambió tu perspectiva. Engancha al lector en las primeras 2 líneas.</p>
+                  <h4>Tu preparación y el énfasis que quieres cursar</h4>
+                  <p>¿Qué formación académica y profesional te ha preparado para este programa? ¿Qué área de especialización (Finanzas, Marketing, Cadena de Suministro, etc.) te interesa y por qué?</p>
                 </div>
               </div>
-              <div class="step-item" style="padding:0.9rem 0">
-                <div class="step-num" style="width:32px;height:32px;font-size:0.78rem;flex-shrink:0">2</div>
+
+              <div class="step-item" style="padding:0.85rem 0">
+                <div class="step-num" style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0">2</div>
                 <div class="step-content">
-                  <h4>Tu trayectoria profesional</h4>
-                  <p>Conecta los puntos de tu carrera de forma coherente. No es una lista de trabajos — es la narrativa de por qué tomaste cada decisión y qué aprendiste. Muestra progresión y propósito.</p>
+                  <h4>Metas académicas y profesionales — corto y largo plazo</h4>
+                  <p>¿Qué harás en los primeros 2–3 años post-MBA? ¿Cuál es tu visión a 10 años? Mientras más concreto y específico, más creíble. Menciona industria, tipo de empresa y rol.</p>
                 </div>
               </div>
-              <div class="step-item" style="padding:0.9rem 0">
-                <div class="step-num" style="width:32px;height:32px;font-size:0.78rem;flex-shrink:0">3</div>
+
+              <div class="step-item" style="padding:0.85rem 0">
+                <div class="step-num" style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0">3</div>
                 <div class="step-content">
-                  <h4>El "gap" y por qué ahora</h4>
-                  <p>¿Qué habilidades, conocimientos o redes te faltan para llegar a donde quieres ir? El MBA debe ser la respuesta lógica e inevitable a esa pregunta. "Ahora" tiene que tener sentido.</p>
+                  <h4>Por qué BYU Marriott — y qué aportarás al programa</h4>
+                  <p>¿Cuáles son tus razones académicas y profesionales específicas para elegir BYU? ¿Qué contribución única traerás a la clase? Menciona recursos concretos del programa: el Fondo Silver, Savage Scholars, la comunidad internacional, los valores de la escuela. Nunca escribas algo que podrías enviar a otra escuela sin cambiar el nombre.</p>
                 </div>
               </div>
-              <div class="step-item" style="padding:0.9rem 0">
-                <div class="step-num" style="width:32px;height:32px;font-size:0.78rem;flex-shrink:0">4</div>
+
+              <div class="step-item" style="padding:0.85rem 0;border-left:3px solid #f59e0b;background:#FFFBF0;padding-left:0.85rem;margin-left:0">
+                <div class="step-num" style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0;background:#d97706">4</div>
                 <div class="step-content">
-                  <h4>Metas claras y específicas</h4>
-                  <p>Metas de corto plazo (qué harás los primeros 2–3 años post-MBA) y largo plazo (tu visión en 10 años). Cuanto más concreto, más creíble. Menciona industria, rol e impacto.</p>
+                  <h4 style="color:#92400e">Un momento en que fallaste o no lo lograste <span class="badge gold" style="font-size:0.6rem;vertical-align:middle">No te lo saltes</span></h4>
+                  <p>BYU pregunta explícitamente: <em>"Describe brevemente un momento en que no lograste una meta, no alcanzaste una aspiración, o tus esfuerzos de liderazgo se quedaron cortos. ¿Qué pasos tomaste para recuperarte? ¿Qué recursos usaste? ¿Cómo y por qué eres diferente hoy?"</em> — esto mide tu capacidad de reflexión, resiliencia y crecimiento. Sé honesto y muestra lo que aprendiste.</p>
                 </div>
               </div>
-              <div class="step-item" style="padding:0.9rem 0;border-bottom:none">
-                <div class="step-num" style="width:32px;height:32px;font-size:0.78rem;flex-shrink:0">5</div>
+
+              <div class="step-item" style="padding:0.85rem 0">
+                <div class="step-num" style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0">5</div>
                 <div class="step-content">
-                  <h4>Por qué BYU Marriott, específicamente</h4>
-                  <p>Esta parte separa a los buenos de los excelentes. Menciona cosas concretas: el Fondo Silver, el programa de Savage Scholars, la comunidad internacional, los valores de la escuela, el ROI. Nunca escribas algo que podrías enviar a otra escuela sin cambiar el nombre.</p>
+                  <h4>Circunstancias especiales <span style="font-weight:400;color:var(--muted);font-size:0.8rem">(opcional)</span></h4>
+                  <p>Si hay algo que el comité necesita entender — una baja en tu GPA, un vacío en tu historial laboral, un cambio de carrera — este es el lugar para explicarlo con contexto y sin excusas.</p>
                 </div>
               </div>
+
+              <div class="step-item" style="padding:0.85rem 0;border-bottom:none">
+                <div class="step-num" style="width:30px;height:30px;font-size:0.75rem;flex-shrink:0">6</div>
+                <div class="step-content">
+                  <h4>Si aplicaste antes y fuiste rechazado <span style="font-weight:400;color:var(--muted);font-size:0.8rem">(solo reaplicantes)</span></h4>
+                  <p>¿Qué has mejorado desde tu última aplicación? Describe cambios concretos en tu perfil profesional, académico o personal desde entonces.</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
@@ -1571,7 +1609,7 @@ html[lang="en"] .lang-es{display:none!important}
               </div>
               <div style="display:flex;gap:0.7rem;align-items:flex-start;font-size:0.84rem;color:var(--mid);line-height:1.65">
                 <span style="color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.05rem">→</span>
-                <span><strong style="color:var(--navy)">Conecta tus valores con los de BYU explícitamente.</strong> Si eres miembro de La Iglesia de Jesucristo, menciona cómo el propósito de servicio y el desarrollo integral se alinean con tu visión de liderazgo.</span>
+                <span><strong style="color:var(--navy)">Conecta tus valores con los de BYU explícitamente.</strong> Si eres miembro de La Iglesia de Jesucristo, menciona cómo el propósito de servicio y el liderazgo de principios se reflejan en tu trayectoria. El comité valora esta alineación.</span>
               </div>
               <div style="display:flex;gap:0.7rem;align-items:flex-start;font-size:0.84rem;color:var(--mid);line-height:1.65">
                 <span style="color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.05rem">→</span>
@@ -1579,31 +1617,20 @@ html[lang="en"] .lang-es{display:none!important}
               </div>
               <div style="display:flex;gap:0.7rem;align-items:flex-start;font-size:0.84rem;color:var(--mid);line-height:1.65">
                 <span style="color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.05rem">→</span>
-                <span><strong style="color:var(--navy)">Escribe en inglés, pero piensa en tu historia.</strong> No traduzcas directamente — adapta el tono al inglés formal de negocios. Evita el uso de adjetivos vacíos ("I am a passionate leader") y reemplázalos con evidencia específica.</span>
+                <span><strong style="color:var(--navy)">Escribe directamente en inglés, no traduzcas.</strong> Evita adjetivos vacíos ("soy un líder apasionado y dedicado") — siempre reemplázalos con evidencia específica. Pide a alguien con inglés nativo que lo revise.</span>
               </div>
             </div>
           </div>
 
           <!-- ERRORES COMUNES -->
           <div style="background:#FEF2F2;border:1px solid #fca5a5;border-left:4px solid #ef4444;padding:1.2rem 1.4rem">
-            <p style="font-size:0.82rem;font-weight:700;color:#991b1b;margin-bottom:0.6rem">⚠️ Los errores más comunes que veo</p>
-            <div style="display:flex;flex-direction:column;gap:0.45rem">
-              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6">
-                <span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span>
-                <span>Metas demasiado vagas: "Quiero tener un impacto positivo en el mundo."</span>
-              </div>
-              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6">
-                <span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span>
-                <span>Repetir el résumé en prosa en lugar de añadir contexto y reflexión.</span>
-              </div>
-              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6">
-                <span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span>
-                <span>Mencionar BYU solo al final con una oración genérica ("BYU es una escuela de clase mundial").</span>
-              </div>
-              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6">
-                <span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span>
-                <span>No revisar la gramática y el tono en inglés — pide a alguien de confianza que lo lea.</span>
-              </div>
+            <p style="font-size:0.82rem;font-weight:700;color:#991b1b;margin-bottom:0.6rem">⚠️ Errores comunes en la carta</p>
+            <div style="display:flex;flex-direction:column;gap:0.4rem">
+              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span><span>Saltarse el Punto 4 (fracaso/tropiezo) — es obligatorio y el comité nota cuando falta.</span></div>
+              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span><span>Metas demasiado vagas: "Quiero tener un impacto positivo en el mundo."</span></div>
+              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span><span>Repetir el résumé en prosa en lugar de añadir contexto, reflexión y emoción.</span></div>
+              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span><span>Mencionar a BYU de forma genérica — "es una escuela de clase mundial" podría describir a cualquier otra escuela.</span></div>
+              <div style="display:flex;gap:0.6rem;font-size:0.82rem;color:var(--mid);line-height:1.6"><span style="color:#ef4444;font-weight:700;flex-shrink:0">✗</span><span>Pedir cartas de recomendación a profesores o líderes religiosos — BYU pide explícitamente supervisores, colegas o personas que reporten contigo.</span></div>
             </div>
           </div>
         </div>
@@ -1613,7 +1640,7 @@ html[lang="en"] .lang-es{display:none!important}
       <!-- CTA REVISIÓN LIMHI -->
       <div class="highlight-box gold" style="margin-top:2.5rem">
         <strong>🤝 ¿Quieres que revise tu résumé o tu carta de intención?</strong>
-        <p>Como parte del equipo de Ambassadors, puedo darte retroalimentación directa sobre tus documentos antes de que los envíes. He pasado por exactamente este proceso y sé lo que el comité de BYU busca. Sin costo y sin compromiso.</p>
+        <p>Como parte del equipo de Ambassadors, puedo darte retroalimentación directa sobre tus documentos antes de que los envíes. He pasado por exactamente este proceso y sé lo que busca el comité de BYU — incluyendo el punto del fracaso, que a muchos les cuesta más. Sin costo y sin compromiso.</p>
         <div style="margin-top:0.9rem;display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center">
           <a href="https://outlook.office.com/book/LimhiDuran@byu.onmicrosoft.com/?ismsaljsauthenabled" target="_blank" style="display:inline-block;background:var(--gold);color:var(--navy);padding:0.5rem 1.1rem;font-size:0.78rem;font-weight:700;text-decoration:none;letter-spacing:0.04em;transition:background 0.2s" onmouseover="this.style.background='#d4b55f'" onmouseout="this.style.background='var(--gold)'">📅 Agendar una sesión de revisión →</a>
           <a href="https://wa.me/+13852255018" target="_blank" style="font-size:0.82rem;font-weight:700;color:var(--blue);text-decoration:none">💬 Enviarme mis documentos por WhatsApp →</a>
@@ -1624,7 +1651,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- ── PREPARACIÓN PARA EXÁMENES ── -->
-  <div class="content-section">
+  <div class="content-section jump-target" id="es-examprep">
     <div class="content-inner">
 
       <p class="section-label">Guía de Preparación</p>
@@ -1637,7 +1664,7 @@ html[lang="en"] .lang-es{display:none!important}
           <div style="width:36px;height:36px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📊</div>
           <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin:0">Examen de Admisión: GMAT Focus Edition o GRE</h3>
         </div>
-        <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;margin-bottom:1.4rem;max-width:72ch">Puedes presentar cualquiera de los dos. El <strong>GMAT Focus</strong> es el más común para MBAs (escala 205–805; el promedio en BYU es 685, aprox. percentil 80). El <strong>GRE</strong> también es aceptado y puede ser más conveniente según tu perfil. Los recursos gratuitos oficiales son más que suficientes para comenzar.</p>
+        <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;margin-bottom:1.4rem;max-width:72ch">Puedes presentar cualquiera de los dos (LSAT y MCAT también son aceptados). El <strong>GMAT Focus</strong> es el más común para MBAs (escala 205–805; el promedio actual en BYU es 615, con rango de candidatos exitosos de 555 a 775). El <strong>GRE</strong> también es aceptado — promedio percentil 85 — y puede ser más conveniente según tu perfil. Los recursos gratuitos oficiales son más que suficientes para comenzar.</p>
 
         <div style="margin-bottom:0.6rem">
           <p style="font-size:0.75rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.8rem">Recursos gratuitos — GMAT</p>
@@ -1782,13 +1809,20 @@ html[lang="en"] .lang-es{display:none!important}
   <div class="section-header-bar" style="background:var(--offwh);padding:3rem 2rem 2.5rem;border-top:4px solid var(--navy)">
     <div class="content-inner">
       <p class="section-label">Admissions Process</p>
-      <h2 class="section-heading">How to Apply al MBA de BYU</h2>
+      <h2 class="section-heading">How to Apply to the BYU MBA</h2>
       <p style="color:var(--mid);font-size:0.92rem;max-width:65ch;line-height:1.8;margin-top:0.5rem">At BYU Marriott the admissions process is <strong style="color:var(--blue)">holistic</strong> — your complete profile matters, not just one number. Here we explain everything you need to know as an international candidate.</p>
+      <nav class="quick-nav" aria-label="Quick navigation">
+        <a href="#en-timeline" class="quick-nav-item"><span class="quick-nav-icon">🗓️</span> Timeline</a>
+        <a href="#en-process" class="quick-nav-item"><span class="quick-nav-icon">✅</span> Process &amp; Criteria</a>
+        <a href="#en-international" class="quick-nav-item"><span class="quick-nav-icon">🌎</span> International Applicants</a>
+        <a href="#en-documents" class="quick-nav-item"><span class="quick-nav-icon">📄</span> Résumé &amp; Statement</a>
+        <a href="#en-examprep" class="quick-nav-item"><span class="quick-nav-icon">📊</span> Exam Prep</a>
+      </nav>
     </div>
   </div>
 
   <!-- TIMELINE VISUAL -->
-  <div class="content-section bg-light">
+  <div class="content-section bg-light jump-target" id="en-timeline">
     <div class="content-inner">
       <p class="section-label">From Here to BYU</p>
       <h2 class="section-heading">How Long Does the Entire Process Take?</h2>
@@ -1844,7 +1878,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- PROCESO GENERAL -->
-  <div class="content-section">
+  <div class="content-section jump-target" id="en-process">
     <div class="content-inner">
       <div class="two-col">
         <div>
@@ -1859,7 +1893,7 @@ html[lang="en"] .lang-es{display:none!important}
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> University transcripts (in English and with GPA equivalency)</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> GMAT or GRE exam (or waiver request if you qualify)</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Updated résumé</li>
-                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> 2 to 4 letters of recommendation</li>
+                  <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Two letters of recommendation</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> Essay: "Statement of Intent"</li>
                   <li style="display:flex;gap:0.5rem;font-size:0.85rem;color:var(--mid)"><span style="color:var(--blue);font-weight:700;flex-shrink:0">→</span> English exam (TOEFL, IELTS or Duolingo, if applicable)</li>
                 </ul>
@@ -1904,19 +1938,19 @@ html[lang="en"] .lang-es{display:none!important}
             <li>
               <div>
                 <strong>Undergraduate GPA</strong><br>
-                <span style="font-weight:400">GPA is the overall average of your university grades on the U.S. scale (0 to 4.0). The class of 2027 average was 3.57. If you studied outside the U.S., you must obtain a translation and equivalency of your transcripts through a BYU-authorized organization (see international requirements section below).</span>
+                <span style="font-weight:400">GPA is the overall average of your university grades on the U.S. scale (0 to 4.0). BYU typically seeks a GPA of <strong>3.5 or higher</strong>, though successfully admitted candidates range from 3.0 to 4.0 — the rigor of your undergraduate program is also taken into account. If you studied outside the U.S., you must obtain a translation and equivalency of your transcripts through a BYU-authorized organization (see international requirements section below).</span>
               </div>
             </li>
             <li>
               <div>
-                <strong>GMAT or GRE</strong><br>
-                <span style="font-weight:400">These are standardized exams that measure verbal, quantitative, and analytical reasoning. The GMAT is scored on a scale of 205 to 805 points — a score of 685 is approximately the 80th percentile (better than 80% of test-takers). The average GMAT in the current BYU class is 685. If you have doubts about the exam or think you might not qualify, contact me before taking it — there are cases where BYU can waive the requirement.</span>
+                <strong>GMAT, GRE, LSAT, or MCAT</strong><br>
+                <span style="font-weight:400">A standardized test score is required, with few exceptions. The <strong>GMAT Focus Edition</strong> is scored on a scale of 205 to 805 points — the current BYU average is <strong>615</strong> (680 on the scale used prior to 2024), with a successful applicant range of 555 to 775. The <strong>GRE</strong> is also accepted, averaging the 85th percentile with a successful applicant range between the 60th and 99th percentile. LSAT and MCAT scores are accepted as well. If you have doubts about the exam or think you might not qualify, contact me before taking it — there are cases where BYU can waive the requirement.</span>
               </div>
             </li>
             <li>
               <div>
                 <strong>Professional experience</strong><br>
-                <span style="font-weight:400">A minimum of 2 years of full-time work experience is recommended. Quality and level of responsibility are valued, not just years of seniority.</span>
+                <span style="font-weight:400">A preferred minimum of 2 years of full-time work experience after your undergraduate degree — this is calculated at the time you start the program, not when you apply. The average admitted student has 4 years of experience. Quality and level of responsibility are valued, not just years of seniority.</span>
                 <div class="highlight-box" style="margin-top:0.7rem;padding:0.8rem 1rem">
                   <strong style="font-size:0.82rem">Special cases:</strong>
                   <ul style="margin-top:0.4rem;padding-left:1rem;font-size:0.82rem">
@@ -1934,8 +1968,8 @@ html[lang="en"] .lang-es{display:none!important}
             </li>
             <li>
               <div>
-                <strong>Letters of recommendation (2 or 3)</strong><br>
-                <span style="font-weight:400">They must be from people who know you professionally and can speak to your leadership ability, teamwork, and growth potential.</span>
+                <strong>Letters of recommendation (2)</strong><br>
+                <span style="font-weight:400">BYU asks for two professional letters of recommendation. It recommends seeking them from supervisors, colleagues, or direct reports — rather than professors or religious leaders.</span>
               </div>
             </li>
             <li>
@@ -1956,7 +1990,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- CANDIDATOS INTERNACIONALES -->
-  <div class="content-section bg-light">
+  <div class="content-section bg-light jump-target" id="en-international">
     <div class="content-inner">
       <p class="section-label">International Applicants</p>
       <h2 class="section-heading">Information for Candidates Outside the U.S.</h2>
@@ -1989,52 +2023,52 @@ html[lang="en"] .lang-es{display:none!important}
             <p style="margin-top:0.5rem;font-size:0.82rem;color:var(--mid)">If your situation does not fit exactly into one of these categories, contact me and I will help you evaluate your case.</p>
           </div>
 
-          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.8rem">Lista de Requisitos para International Applicants</h3>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin:1.8rem 0 0.8rem">Checklist for International Applicants</h3>
           <ul class="req-list">
             <li>Official university transcripts translated into English with GPA equivalency, processed through <strong>IERF</strong> or <strong>SpanTran</strong> (the two organizations authorized by BYU Graduate Studies for this process — <strong>do not send documents directly to BYU</strong>)</li>
             <li>English exam: TOEFL iBT (min. 100), IELTS Academic (min. 7.0), Cambridge CAE C1 Advanced (min. 180) or Duolingo English Test (min. 130), unless exempt — see conditions above</li>
-            <li>Evidencia de recursos financieros o solicitud de la Cardon Scholarship (CIS)</li>
+            <li>Evidence of financial resources or application for the Cardon Scholarship (CIS)</li>
             <li style="background:#FEF9EC;border-left-color:var(--gold)">After being admitted: meet all requirements to obtain a student visa (F-1 or J-1 type), including a valid passport. Obtaining or renewing a passport can take time, so it is advisable to start this process in advance.</li>
           </ul>
         </div>
 
         <div>
-          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Deadlines — 2027–2028 Cycle</h3>
-          <p style="font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:1.2rem">BYU reviews applications on a rolling basis within each round. Once your application is complete, you can expect a response in approximately 3 weeks.</p>
+          <h3 style="font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.8rem">Deadlines — Fall 2027 Entry</h3>
+          <p style="font-size:0.83rem;color:var(--mid);line-height:1.65;margin-bottom:1.2rem">Applications open on <strong>July 15, 2026</strong>. BYU accepts applications on a rolling basis within each round, and once a round's deadline passes, all applications are reviewed together — so interview invitations and admission decisions are released on a rolling basis rather than on a single notification date.</p>
           <div style="display:flex;flex-direction:column;gap:0.7rem;margin-bottom:1.5rem">
             <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--gold)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
-                <span style="background:var(--gold);color:var(--navy);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">PRIORITY — SCHOLARSHIPS</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Oct 2026</span>
+                <span style="background:var(--gold);color:var(--navy);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">ROUND 1 — SCHOLARSHIP PRIORITY</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">Oct 2, 2026</span>
               </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Deadline for priority scholarship consideration. Most scholarships are awarded to candidates from this stage.</p>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MDT. Deadline for priority scholarship consideration. Most scholarships are awarded to candidates from this stage.</p>
             </div>
             <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
-                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">ROUND 1</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Dic 2026</span>
+                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">ROUND 2 — INTERNATIONAL PRIORITY</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">Dec 11, 2026</span>
               </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Greater availability of spots and sufficient time for visa processing.</p>
-            </div>
-            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue)">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
-                <span style="background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">ROUND 2 — INTERNATIONAL</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">15 Ene 2027</span>
-              </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Priority deadline for international candidates. Scholarships are still available.</p>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MST. Priority deadline for international candidates. Scholarships are still available and there is enough time for visa processing.</p>
             </div>
             <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--navy)">
               <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
                 <span style="background:var(--navy);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">ROUND 3 — INTERNATIONAL FINAL</span>
-                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">1 Mar 2027</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">Feb 19, 2027</span>
               </div>
-              <p style="font-size:0.82rem;color:var(--mid)">Final deadline for international candidates. Also the deadline to apply for the Cardon Scholarship (CIS).</p>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MST. Final deadline for international candidates. Also the deadline to have your full application submitted if you want to be considered for the Cardon Scholarship (CIS).</p>
+            </div>
+            <div style="padding:1rem 1.2rem;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--muted)">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem">
+                <span style="background:var(--muted);color:var(--white);font-size:0.7rem;font-weight:700;padding:0.2rem 0.7rem">ROUND 4 — DOMESTIC FINAL</span>
+                <span style="font-size:0.88rem;font-weight:700;color:var(--navy)">Apr 30, 2027</span>
+              </div>
+              <p style="font-size:0.82rem;color:var(--mid)">11:59 p.m. MDT. Final round of the cycle — <strong>domestic candidates only</strong> (U.S. citizens or residents), since it doesn't leave enough time to process a student visa.</p>
             </div>
           </div>
 
           <div class="highlight-box red">
             <strong>⚠️ Important for international candidates</strong>
-            <p>Candidates from outside the U.S. <strong>must apply by March 1, 2026</strong> as the final deadline. To maximize your chances of a scholarship, apply before October 15, 2025. The earlier you apply, the better.</p>
+            <p>Candidates from outside the U.S. <strong>must apply by February 19, 2027</strong> (Round 3), since Round 4 is domestic-only. To maximize your chances of a scholarship, apply before October 2, 2026 (Round 1). The earlier you apply, the better.</p>
           </div>
           <a href="https://marriott.byu.edu/mba/admissions/at-a-glance/international-admissions/" target="_blank" class="card-link" style="display:block;margin-top:1rem">View official international candidates page →</a>
         </div>
@@ -2043,7 +2077,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- ── RESUME Y STATEMENT OF INTENT ── -->
-  <div class="content-section bg-light">
+  <div class="content-section bg-light jump-target" id="en-documents">
     <div class="content-inner">
 
       <p class="section-label">Application Documents</p>
@@ -2309,7 +2343,7 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 
   <!-- ── PREPARACIÓN PARA EXÁMENES ── -->
-  <div class="content-section">
+  <div class="content-section jump-target" id="en-examprep">
     <div class="content-inner">
 
       <p class="section-label">Preparation Guide</p>
@@ -2322,7 +2356,7 @@ html[lang="en"] .lang-es{display:none!important}
           <div style="width:36px;height:36px;background:var(--navy);color:var(--white);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">📊</div>
           <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin:0">Admission Exam: GMAT Focus Edition or GRE</h3>
         </div>
-        <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;margin-bottom:1.4rem;max-width:72ch">You can take either one. The <strong>GMAT Focus</strong> is the most common for MBAs (scale 205–805; BYU average is 685, approx. 80th percentile). The <strong>GRE</strong> is also accepted and may be more convenient depending on your profile. Official free resources are more than enough to get started.</p>
+        <p style="font-size:0.85rem;color:var(--mid);line-height:1.75;margin-bottom:1.4rem;max-width:72ch">You can take either one (LSAT and MCAT are also accepted). The <strong>GMAT Focus</strong> is the most common for MBAs (scale 205–805; the current BYU average is 615, with a successful applicant range of 555–775). The <strong>GRE</strong> is also accepted — averaging the 85th percentile — and may be more convenient depending on your profile. Official free resources are more than enough to get started.</p>
 
         <div style="margin-bottom:0.6rem">
           <p style="font-size:0.75rem;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.8rem">Free resources — GMAT</p>
@@ -3392,6 +3426,9 @@ html[lang="en"] .lang-es{display:none!important}
   </div>
 </div>
 
+<!-- ─── BACK TO TOP ─── -->
+<button id="backToTop" class="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to top" title="Back to top">↑</button>
+
 <!-- ─── FOOTER ─── -->
 <footer>
   <p class="lang-es">Página creada por un estudiante actual del MBA de BYU Marriott · Esta es una iniciativa de reclutamiento estudiantil no oficial.</p>
@@ -3445,6 +3482,12 @@ const obs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold: 0.1});
 document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// ─── BACK TO TOP ───
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTopBtn.classList.toggle('visible', window.scrollY > 500);
+});
 
 // ─── INIT ───
 setLang(currentLang);
